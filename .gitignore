@@ -1,8 +1,0 @@
-*.csproj
-*.vs
-UnityPackageManager
-Temp
-obj
-Library
-Logs
-bin
