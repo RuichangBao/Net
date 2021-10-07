@@ -6,7 +6,6 @@ E:\GitProject\Net\Second\Server\bin\Debug\net5.0-windows\Server.dll
 E:\GitProject\Net\Second\Server\bin\Debug\net5.0-windows\ref\Server.dll
 E:\GitProject\Net\Second\Server\bin\Debug\net5.0-windows\Server.pdb
 E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.csproj.AssemblyReference.cache
-E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.Form1.resources
 E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.csproj.GenerateResource.cache
 E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.GeneratedMSBuildEditorConfig.editorconfig
 E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.AssemblyInfoInputs.cache
@@ -16,3 +15,5 @@ E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.dll
 E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\ref\Server.dll
 E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.pdb
 E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.genruntimeconfig.cache
+E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.LogForm.resources
+E:\GitProject\Net\Second\Server\obj\Debug\net5.0-windows\Server.MainForm.resources
