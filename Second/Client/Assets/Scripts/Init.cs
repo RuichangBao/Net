@@ -7,7 +7,7 @@ public class Init : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _ = NetManager.Instance;
+        var a = NetManager.Instance;
     }
 
     // Update is called once per frame

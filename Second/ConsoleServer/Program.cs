@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
+using System.Diagnostics;
 
 namespace ConsoleServer
 {
@@ -15,6 +16,6 @@ namespace ConsoleServer
         {
             NetManager netManager = new NetManager();
         }
-        
+
     }
 }
