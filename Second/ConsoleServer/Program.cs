@@ -14,7 +14,8 @@ namespace ConsoleServer
     {
         static void Main(string[] args)
         {
-            NetManager netManager = new NetManager();
+            //NetManager1 netManager1 = new NetManager1();
+            NetManager2 netManager2 = new NetManager2();
         }
 
     }
