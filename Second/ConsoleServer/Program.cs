@@ -16,6 +16,16 @@ namespace ConsoleServer
         {
             //NetManager1 netManager1 = new NetManager1();
             NetManager2 netManager2 = new NetManager2();
+
+
+            while (true)
+            {
+                if(Console.ReadLine().ToLower()== "clear")
+                {
+                    //Console.Clear();
+                    Console.WriteLine("清屏");
+                }
+            }
         }
 
     }
