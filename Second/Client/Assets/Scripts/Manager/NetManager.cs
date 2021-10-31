@@ -32,7 +32,7 @@ public class NetManager
     /// 发送消息
     /// </summary>
     /// <param name="data"></param>
-    public void SendMessaage(byte[] data)
+    public void SendMessage(byte[] data)
     {
         Debug.LogError("向服务器发送消息");
         try

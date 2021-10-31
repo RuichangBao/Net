@@ -34,20 +34,39 @@ namespace ConsoleServer
         /// 接收数据
         /// </summary>
         /// <param name="obj"></param>
-        private void ReceiveMessage(object obj)
+        private void ReceiveMessage()
         {
             while (true)
             {
                 try
                 {
                     IPEndPoint clienIPEndPoint = null;
-                    byte[] bytRecv = udpcRecv.Receive(ref clienIPEndPoint);
+                    byte[] data = udpcRecv.Receive(ref clienIPEndPoint);
                     Console.WriteLine("收到客户端 消息 端口号" + clienIPEndPoint.Port);
-                    string message = Encoding.UTF8.GetString(bytRecv, 0, bytRecv.Length);
-
+                    Console.WriteLine(data.Length);
+                    //string message = Encoding.UTF8.GetString(data, 0, data.Length);
+                    object obj = MySerializerUtil.BytesToObject(data);
+                    if (obj != null)
+                    {
+                        TestClass testClass1 = obj as TestClass;
+                        if (testClass1 != null)
+                        {
+                            Console.WriteLine(testClass1.msgType);
+                            Console.WriteLine(testClass1.strc);
+                        }
+                        else
+                        {
+                            Console.WriteLine("BBBBBBBBBBBBBBB");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("CCCCCCCCCCCCCCC");
+                    }
+                   
                     IPEndPoint serverIPEndPoint = new IPEndPoint(clienIPEndPoint.Address, clientPort);
-                    SendMessage(bytRecv, serverIPEndPoint);
-                    Console.WriteLine(string.Format("{0}[{1}]", serverIPEndPoint, message));
+                    SendMessage(data, serverIPEndPoint);
+                    //Console.WriteLine(string.Format("{0}[{1}]", serverIPEndPoint, message));
 
                 }
                 catch (Exception ex)
