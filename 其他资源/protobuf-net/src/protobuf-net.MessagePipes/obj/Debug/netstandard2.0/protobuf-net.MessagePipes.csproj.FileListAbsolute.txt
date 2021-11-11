@@ -1,0 +1,11 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\bin\Debug\netstandard2.0\protobuf-net.MessagePipes.deps.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\bin\Debug\netstandard2.0\protobuf-net.MessagePipes.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\bin\Debug\netstandard2.0\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.csproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.AssemblyInfo.cs
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.csproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.csproj.CopyComplete
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.MessagePipes\obj\Debug\netstandard2.0\protobuf-net.MessagePipes.dll

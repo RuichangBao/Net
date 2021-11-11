@@ -71,7 +71,6 @@
     <Compile Include="NetManager2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Test.cs" />
     <Compile Include="TestClass.cs" />
   </ItemGroup>
   <ItemGroup>

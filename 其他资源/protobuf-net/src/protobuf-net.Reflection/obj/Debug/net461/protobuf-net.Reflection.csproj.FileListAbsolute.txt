@@ -1,0 +1,15 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\bin\Debug\net461\protobuf-net.Reflection.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\bin\Debug\net461\System.Buffers.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\bin\Debug\net461\System.Collections.Immutable.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\bin\Debug\net461\System.Memory.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\bin\Debug\net461\System.Numerics.Vectors.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\bin\Debug\net461\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\bin\Debug\net461\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.csproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.AssemblyInfo.cs
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.csproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.csproj.CopyComplete
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Reflection\obj\Debug\net461\protobuf-net.Reflection.dll

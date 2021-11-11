@@ -1,0 +1,24 @@
+{
+  "version": 2,
+  "dgSpecHash": "htEKQtDj7wDJYSYU/jejBLcGgLgcdvYGTUHJx8TtXHwJseYuhG7nRtkt30bk2TDUxV54bRFYMZk45k4eDa0Ulw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\baoruichang\\Desktop\\protobuf-net\\src\\protobuf-net.Protogen\\protobuf-net.Protogen.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\baoruichang\\.nuget\\packages\\grpc.core.api\\2.33.1\\grpc.core.api.2.33.1.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\grpc.net.client\\2.33.1\\grpc.net.client.2.33.1.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\grpc.net.common\\2.33.1\\grpc.net.common.2.33.1.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\3.0.3\\microsoft.extensions.logging.abstractions.3.0.3.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\nerdbank.gitversioning\\3.3.37\\nerdbank.gitversioning.3.3.37.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\protobuf-net.grpc\\1.0.123\\protobuf-net.grpc.1.0.123.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\protobuf-net.grpc.reflection\\1.0.123\\protobuf-net.grpc.reflection.1.0.123.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.5.1\\system.diagnostics.diagnosticsource.4.5.1.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\system.threading.channels\\4.7.1\\system.threading.channels.4.7.1.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.netcore.app.ref\\5.0.0\\microsoft.netcore.app.ref.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

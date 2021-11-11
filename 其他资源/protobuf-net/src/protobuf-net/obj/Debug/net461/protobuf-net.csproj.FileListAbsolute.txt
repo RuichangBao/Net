@@ -1,0 +1,15 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\bin\Debug\net461\protobuf-net.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\bin\Debug\net461\System.Buffers.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\bin\Debug\net461\System.Collections.Immutable.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\bin\Debug\net461\System.Memory.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\bin\Debug\net461\System.Numerics.Vectors.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\bin\Debug\net461\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\bin\Debug\net461\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.csproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.AssemblyInfo.cs
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.csproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.csproj.CopyComplete
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net\obj\Debug\net461\protobuf-net.dll

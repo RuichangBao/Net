@@ -1,0 +1,14 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protogen.exe
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protogen.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protogen.runtimeconfig.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\Grpc.Core.Api.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\Grpc.Net.Client.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\Grpc.Net.Common.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protobuf-net.Grpc.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protobuf-net.Grpc.Reflection.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\System.Threading.Channels.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protobuf-net.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protobuf-net.Reflection.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\netcoreapp3.1\publish\protogen.deps.json

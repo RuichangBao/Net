@@ -1,0 +1,16 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\bin\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.exe
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\bin\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.deps.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\bin\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.runtimeconfig.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\bin\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.runtimeconfig.dev.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\bin\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\bin\Debug\netcoreapp3.1\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\bin\Debug\netcoreapp3.1\protobuf-net.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.csproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.AssemblyInfo.cs
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.csproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.csproj.CopyComplete
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.TestWebConsole\obj\Debug\netcoreapp3.1\protobuf-net.TestWebConsole.genruntimeconfig.cache

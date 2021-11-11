@@ -1,0 +1,9 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\bin\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.deps.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\bin\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\obj\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.csproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\obj\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\obj\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\obj\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.AssemblyInfo.cs
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\obj\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.csproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\obj\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools.Legacy\obj\Debug\netstandard2.0\protobuf-net.BuildTools.Legacy.dll

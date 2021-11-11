@@ -45,19 +45,14 @@ namespace ConsoleServer
                     Console.WriteLine("收到客户端 消息 端口号" + clienIPEndPoint.Port);
                     Console.WriteLine(data.Length);
                     //string message = Encoding.UTF8.GetString(data, 0, data.Length);
-                    object obj = MySerializerUtil.BytesToObject(data);
-                    if (obj != null)
+                    TestClass1 testClass1 = MySerializerUtil.Deserialize<TestClass1>(data);
+                    if (testClass1 != null)
                     {
-                        TestClass testClass1 = obj as TestClass;
-                        if (testClass1 != null)
-                        {
-                            Console.WriteLine(testClass1.msgType);
-                            Console.WriteLine(testClass1.strc);
-                        }
-                        else
-                        {
-                            Console.WriteLine("BBBBBBBBBBBBBBB");
-                        }
+                        Console.WriteLine("A" + testClass1.msgType);
+                        Console.WriteLine("B" + testClass1.strc);
+                        Console.WriteLine("C" + testClass1.a);
+                        Console.WriteLine("C" + testClass1.b);
+                        //Console.WriteLine("C" + testClass1.c);
                     }
                     else
                     {

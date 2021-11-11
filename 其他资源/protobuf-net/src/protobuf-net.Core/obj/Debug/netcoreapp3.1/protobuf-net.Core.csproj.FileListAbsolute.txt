@@ -1,0 +1,9 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\bin\Debug\netcoreapp3.1\protobuf-net.Core.deps.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\bin\Debug\netcoreapp3.1\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\obj\Debug\netcoreapp3.1\protobuf-net.Core.csproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\obj\Debug\netcoreapp3.1\protobuf-net.Core.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\obj\Debug\netcoreapp3.1\protobuf-net.Core.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\obj\Debug\netcoreapp3.1\protobuf-net.Core.AssemblyInfo.cs
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\obj\Debug\netcoreapp3.1\protobuf-net.Core.csproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\obj\Debug\netcoreapp3.1\protobuf-net.Core.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Core\obj\Debug\netcoreapp3.1\protobuf-net.Core.dll

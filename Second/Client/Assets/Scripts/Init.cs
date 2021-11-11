@@ -8,26 +8,14 @@ using System.Runtime.Serialization.Formatters.Binary;
 
 public class Init : MonoBehaviour
 {
-    // Start is called before the first frame update
     void Start()
     {
-        //string str = "fdsafasfsdaf";
-        //byte[] data = Encoding.UTF8.GetBytes(str);
-        //NetManager.Instance.SendMessage(data);
-        TestClass testClass = new TestClass();
-        byte[] data = MySerializerUtil.ObjectToBytes(testClass);
+        TestClass1 testClass = new TestClass1();
+        byte[] data = MySerializerUtil.Serialize(testClass);
         Debug.LogError(data.Length);
         NetManager.Instance.SendMessage(data);
-        object obj = MySerializerUtil.BytesToObject(data);
-        if(obj!=null)
-        {
-            TestClass testClass1 = obj as TestClass;
-            if(testClass1!=null)
-            {
-                Debug.LogError(testClass1.msgType);
-                Debug.LogError(testClass1.strc);
-            }
-        }
+        TestClass1 TestClass2 = MySerializerUtil.Deserialize<TestClass1>(data);
+        Debug.LogError(TestClass2.ToString());
     }
     
     // Update is called once per frame

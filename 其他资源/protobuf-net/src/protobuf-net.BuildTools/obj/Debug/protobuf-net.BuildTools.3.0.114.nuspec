@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>protobuf-net.BuildTools</id>
+    <version>3.0.114</version>
+    <authors>Marc Gravell</authors>
+    <developmentDependency>true</developmentDependency>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <icon>protobuf-net.png</icon>
+    <projectUrl>https://github.com/protobuf-net/protobuf-net</projectUrl>
+    <description>Analyzer and Generator support for protobuf-net</description>
+    <releaseNotes>https://protobuf-net.github.io/protobuf-net/releasenotes#</releaseNotes>
+    <copyright>See https://github.com/protobuf-net/protobuf-net</copyright>
+    <tags>binary serialization protobuf</tags>
+    <repository type="git" url="https://github.com/protobuf-net/protobuf-net" commit="c67c2042187a06873cfbf24a00f42aa16c718526" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\baoruichang\Desktop\protobuf-net\protobuf-net.png" target="protobuf-net.png" />
+    <file src="C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\bin\Debug\netstandard2.0\protobuf-net.BuildTools.dll" target="analyzers\dotnet\cs\protobuf-net.BuildTools.dll" />
+  </files>
+</package>

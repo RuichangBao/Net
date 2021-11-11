@@ -1,0 +1,12 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\bin\Debug\netcoreapp3.1\CSharpTest.deps.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\bin\Debug\netcoreapp3.1\CSharpTest.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\bin\Debug\netcoreapp3.1\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\bin\Debug\netcoreapp3.1\protobuf-net.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.csproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.AssemblyInfo.cs
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.csproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.csproj.CopyComplete
+C:\Users\baoruichang\Desktop\protobuf-net\src\CSharpTest\obj\Debug\netcoreapp3.1\CSharpTest.dll

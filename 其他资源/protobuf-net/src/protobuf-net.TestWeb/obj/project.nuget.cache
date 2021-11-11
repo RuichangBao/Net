@@ -1,0 +1,15 @@
+{
+  "version": 2,
+  "dgSpecHash": "BqyZpDYGjM+42/VFvPsjjz8GeOOK4Imoq81DNPCP8LU6vpz0W3/cf1KnlEc9KHMHg0Q+dQh4Yfk5lUN97BHLpQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\baoruichang\\Desktop\\protobuf-net\\src\\protobuf-net.TestWeb\\protobuf-net.TestWeb.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.build.tasks.git\\1.0.0\\microsoft.build.tasks.git.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.netframework.referenceassemblies\\1.0.0\\microsoft.netframework.referenceassemblies.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.sourcelink.common\\1.0.0\\microsoft.sourcelink.common.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\microsoft.sourcelink.github\\1.0.0\\microsoft.sourcelink.github.1.0.0.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\nerdbank.gitversioning\\3.3.37\\nerdbank.gitversioning.3.3.37.nupkg.sha512",
+    "C:\\Users\\baoruichang\\.nuget\\packages\\system.io.pipelines\\5.0.0\\system.io.pipelines.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

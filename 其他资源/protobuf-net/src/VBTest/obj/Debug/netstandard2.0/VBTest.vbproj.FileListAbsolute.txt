@@ -1,0 +1,12 @@
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\bin\Debug\netstandard2.0\VBTest.deps.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\bin\Debug\netstandard2.0\VBTest.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\bin\Debug\netstandard2.0\protobuf-net.Core.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\bin\Debug\netstandard2.0\protobuf-net.dll
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.vbproj.AssemblyReference.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.AssemblyInfoInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.AssemblyInfo.vb
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.vbproj.CoreCompileInputs.cache
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.sourcelink.json
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.vbproj.CopyComplete
+C:\Users\baoruichang\Desktop\protobuf-net\src\VBTest\obj\Debug\netstandard2.0\VBTest.dll
