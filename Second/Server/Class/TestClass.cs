@@ -4,7 +4,7 @@ using System;
 namespace Server
 {
     [ProtoContract]
-    class TestClass1: Request
+    class TestClass1: Req
     {
         [ProtoMember(2)]
         public int a = 100;

@@ -14,7 +14,7 @@ namespace Server
         private const string ip = "127.0.0.1";
         private int clientPort = 8898;
         private int serverPort = 8899;
-  
+
 
         private UdpClient udpcRecv = null;
         private IPEndPoint localIpep = null;
@@ -42,13 +42,11 @@ namespace Server
                 {
                     IPEndPoint clienIPEndPoint = null;
                     byte[] data = udpcRecv.Receive(ref clienIPEndPoint);
-                    Console.WriteLine("收到客户端 消息 端口号" + clienIPEndPoint.Port);
-                    Console.WriteLine(data.Length);
-                    //string message = Encoding.UTF8.GetString(data, 0, data.Length);
-                    Request request = MySerializerUtil.Deserialize<Request>(data);
-                    if (request != null)
+
+                    Req req = MySerializerUtil.Deserialize<Req>(data);
+                    if (req != null)
                     {
-                        ParsingRequest(request.msgType, data);
+                        ParsingRequest(req.msgType, data);
                     }
                     IPEndPoint serverIPEndPoint = new IPEndPoint(clienIPEndPoint.Address, clientPort);
                     SendMessage(data, serverIPEndPoint);
@@ -63,7 +61,7 @@ namespace Server
             }
         }
 
-        private byte[] ParsingRequest(MsgType  msgType,byte[]data)
+        private byte[] ParsingRequest(MsgType msgType, byte[] data)
         {
             switch (msgType)
             {
@@ -71,8 +69,11 @@ namespace Server
                     TestClass1 testClass1 = MySerializerUtil.Deserialize<TestClass1>(data);
                     if (testClass1 != null)
                     {
-                        Console.WriteLine("AAA"+testClass1.ToString());
+                        Console.WriteLine("AAA" + testClass1.ToString());
                     }
+                    break;
+                case MsgType.CreateRoom:
+                    CreateRoomReq req = MySerializerUtil.Deserialize<CreateRoomReq>(data);
                     break;
                 default:
                     return data;
@@ -85,6 +86,5 @@ namespace Server
             Console.WriteLine("向客户端发送消息：" + iPEndPoint.Port + "    " + iPEndPoint.Address);
             udpcRecv.Send(data, data.Length, iPEndPoint);
         }
-
     }
 }

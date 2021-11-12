@@ -39,14 +39,13 @@ public class NetManager
     /// <param name="data"></param>
     public void SendMessage(byte[] data)
     {
-        Debug.LogError("向服务器发送消息");
         try
         {
             udpcSend.Send(data, data.Length, ip, serverPort);
         }
-        catch(Exception e)
+        catch (Exception e)
         {
-            Debug.LogError("发送消息失败"+e.Message);
+            Debug.LogError("发送消息失败" + e.Message);
         }
     }
 
@@ -61,10 +60,12 @@ public class NetManager
         {
             try
             {
-                byte[] bytRecv = udpcRecv.Receive(ref clienIPEndPoint);
-                string message = Encoding.UTF8.GetString(bytRecv, 0, bytRecv.Length);
-
-                Debug.LogError(string.Format("收到服务器回应 {0}[{1}]", clienIPEndPoint, message));
+                byte[] data = udpcRecv.Receive(ref clienIPEndPoint);
+                Ack ack = MySerializerUtil.Deserialize<Ack>(data);
+                if (ack != null)
+                {
+                    ParsingData(ack.msgType, data);
+                }
             }
             catch (Exception ex)
             {
@@ -72,5 +73,35 @@ public class NetManager
                 break;
             }
         }
+    }
+    private byte[] ParsingData(MsgType msgType, byte[] data)
+    {
+        switch (msgType)
+        {
+            case MsgType.TEST:
+                TestClass1 testClass1 = MySerializerUtil.Deserialize<TestClass1>(data);
+                if (testClass1 != null)
+                {
+                    Console.WriteLine("AAA" + testClass1.ToString());
+                }
+                break;
+            case MsgType.CreateRoom:
+                CreateRoom(data);
+                break;
+            case MsgType.JoinRoom:
+                JoinRoom(data);
+                break;
+            default:
+                return data;
+        }
+        return null;
+    }
+    private void CreateRoom(byte[] data)
+    {
+        CreateRoomAck ack = MySerializerUtil.Deserialize<CreateRoomAck>(data);
+    }
+    private void JoinRoom(byte[] data)
+    {
+        JoinRoomAck ack = MySerializerUtil.Deserialize<JoinRoomAck>(data);
     }
 }
