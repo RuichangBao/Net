@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{0EA396DF-3A6F-42AD-A3F9-03CC0294A12D}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleServer</RootNamespace>
-    <AssemblyName>ConsoleServer</AssemblyName>
+    <RootNamespace>Server</RootNamespace>
+    <AssemblyName>Server</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -65,13 +65,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MsgType.cs" />
-    <Compile Include="MySerializerUtil.cs" />
-    <Compile Include="NetManager1.cs" />
-    <Compile Include="NetManager2.cs" />
+    <Compile Include="Class\MsgType.cs" />
+    <Compile Include="Class\MySerializerUtil.cs" />
+    <Compile Include="Class\NetManager1.cs" />
+    <Compile Include="Class\NetManager2.cs" />
+    <Compile Include="Class\Request.cs" />
+    <Compile Include="Class\Response.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="TestClass.cs" />
+    <Compile Include="Class\TestClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

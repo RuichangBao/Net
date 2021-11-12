@@ -4,10 +4,8 @@ using System;
 namespace Server
 {
     [ProtoContract]
-    public class TestClass1
+    class TestClass1: Request
     {
-        [ProtoMember(1)]
-        public MsgType msgType = MsgType.TEST;
         [ProtoMember(2)]
         public int a = 100;
         [ProtoMember(3)]

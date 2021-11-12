@@ -1,6 +1,3 @@
-D:\GitProject\Net\Second\Server\bin\Debug\ConsoleServer.exe.config
-D:\GitProject\Net\Second\Server\bin\Debug\ConsoleServer.exe
-D:\GitProject\Net\Second\Server\bin\Debug\ConsoleServer.pdb
 D:\GitProject\Net\Second\Server\bin\Debug\protobuf-net.Core.dll
 D:\GitProject\Net\Second\Server\bin\Debug\protobuf-net.dll
 D:\GitProject\Net\Second\Server\bin\Debug\System.Buffers.dll
@@ -17,5 +14,9 @@ D:\GitProject\Net\Second\Server\bin\Debug\System.Numerics.Vectors.xml
 D:\GitProject\Net\Second\Server\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
 D:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.AssemblyReference.cache
 D:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
-D:\GitProject\Net\Second\Server\obj\Debug\ConsoleServer.exe
-D:\GitProject\Net\Second\Server\obj\Debug\ConsoleServer.pdb
+D:\GitProject\Net\Second\Server\bin\Debug\Server.exe.config
+D:\GitProject\Net\Second\Server\bin\Debug\Server.exe
+D:\GitProject\Net\Second\Server\bin\Debug\Server.pdb
+D:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.CopyComplete
+D:\GitProject\Net\Second\Server\obj\Debug\Server.exe
+D:\GitProject\Net\Second\Server\obj\Debug\Server.pdb

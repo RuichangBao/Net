@@ -45,20 +45,11 @@ namespace Server
                     Console.WriteLine("收到客户端 消息 端口号" + clienIPEndPoint.Port);
                     Console.WriteLine(data.Length);
                     //string message = Encoding.UTF8.GetString(data, 0, data.Length);
-                    TestClass1 testClass1 = MySerializerUtil.Deserialize<TestClass1>(data);
-                    if (testClass1 != null)
+                    Request request = MySerializerUtil.Deserialize<Request>(data);
+                    if (request != null)
                     {
-                        Console.WriteLine("A" + testClass1.msgType);
-                        Console.WriteLine("B" + testClass1.strc);
-                        Console.WriteLine("C" + testClass1.a);
-                        Console.WriteLine("C" + testClass1.b);
-                        //Console.WriteLine("C" + testClass1.c);
+                        ParsingRequest(request.msgType, data);
                     }
-                    else
-                    {
-                        Console.WriteLine("CCCCCCCCCCCCCCC");
-                    }
-                   
                     IPEndPoint serverIPEndPoint = new IPEndPoint(clienIPEndPoint.Address, clientPort);
                     SendMessage(data, serverIPEndPoint);
                     //Console.WriteLine(string.Format("{0}[{1}]", serverIPEndPoint, message));
@@ -70,6 +61,23 @@ namespace Server
                     break;
                 }
             }
+        }
+
+        private byte[] ParsingRequest(MsgType  msgType,byte[]data)
+        {
+            switch (msgType)
+            {
+                case MsgType.TEST:
+                    TestClass1 testClass1 = MySerializerUtil.Deserialize<TestClass1>(data);
+                    if (testClass1 != null)
+                    {
+                        Console.WriteLine("AAA"+testClass1.ToString());
+                    }
+                    break;
+                default:
+                    return data;
+            }
+            return null;
         }
 
         public void SendMessage(byte[] data, IPEndPoint iPEndPoint)
