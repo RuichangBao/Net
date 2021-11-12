@@ -10,12 +10,13 @@ public class Init : MonoBehaviour
 {
     void Start()
     {
-        TestClass1 testClass = new TestClass1();
-        byte[] data = MySerializerUtil.Serialize(testClass);
-        Debug.LogError(data.Length);
-        NetManager.Instance.SendMessage(data);
-        TestClass1 TestClass2 = MySerializerUtil.Deserialize<TestClass1>(data);
-        Debug.LogError(TestClass2.ToString());
+        _ = NetManager.Instance;
+        //TestClass1 testClass = new TestClass1();
+        //byte[] data = MySerializerUtil.Serialize(testClass);
+        //Debug.LogError(data.Length);
+        //NetManager.Instance.SendMessage(data);
+        //TestClass1 TestClass2 = MySerializerUtil.Deserialize<TestClass1>(data);
+        //Debug.LogError(TestClass2.ToString());
     }
     
     // Update is called once per frame

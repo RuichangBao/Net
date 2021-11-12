@@ -28,6 +28,11 @@ public class NetManager
         Thread thrRecv = new Thread(ReceiveMessage);
         thrRecv.Start();
     }
+    public void SendMessage(Req req)
+    {
+        byte[] data = MySerializerUtil.Serialize(req);
+        SendMessage(data);
+    }
     /// <summary>
     /// 发送消息
     /// </summary>
