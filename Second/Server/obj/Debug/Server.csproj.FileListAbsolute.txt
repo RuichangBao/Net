@@ -17,6 +17,5 @@ D:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 D:\GitProject\Net\Second\Server\bin\Debug\Server.exe.config
 D:\GitProject\Net\Second\Server\bin\Debug\Server.exe
 D:\GitProject\Net\Second\Server\bin\Debug\Server.pdb
-D:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.CopyComplete
 D:\GitProject\Net\Second\Server\obj\Debug\Server.exe
 D:\GitProject\Net\Second\Server\obj\Debug\Server.pdb

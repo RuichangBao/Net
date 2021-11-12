@@ -79,11 +79,6 @@ public class NetManager
         switch (msgType)
         {
             case MsgType.TEST:
-                TestClass1 testClass1 = MySerializerUtil.Deserialize<TestClass1>(data);
-                if (testClass1 != null)
-                {
-                    Console.WriteLine("AAA" + testClass1.ToString());
-                }
                 break;
             case MsgType.CreateRoom:
                 CreateRoom(data);

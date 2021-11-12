@@ -46,7 +46,7 @@ namespace Server
                     Req req = MySerializerUtil.Deserialize<Req>(data);
                     if (req != null)
                     {
-                        ParsingRequest(req.msgType, data);
+                        Parsing(req.msgType, data);
                     }
                     IPEndPoint serverIPEndPoint = new IPEndPoint(clienIPEndPoint.Address, clientPort);
                     SendMessage(data, serverIPEndPoint);
@@ -61,16 +61,11 @@ namespace Server
             }
         }
 
-        private byte[] ParsingRequest(MsgType msgType, byte[] data)
+        private byte[] Parsing(MsgType msgType, byte[] data)
         {
             switch (msgType)
             {
                 case MsgType.TEST:
-                    TestClass1 testClass1 = MySerializerUtil.Deserialize<TestClass1>(data);
-                    if (testClass1 != null)
-                    {
-                        Console.WriteLine("AAA" + testClass1.ToString());
-                    }
                     break;
                 case MsgType.CreateRoom:
                     CreateRoomReq req = MySerializerUtil.Deserialize<CreateRoomReq>(data);

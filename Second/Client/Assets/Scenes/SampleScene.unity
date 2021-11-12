@@ -573,8 +573,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b8012833206de44d8db920886572f3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  btnCreateRoom: {fileID: 0}
-  btnJoinRoom: {fileID: 0}
+  btnCreateRoom: {fileID: 1237740453}
+  btnJoinRoom: {fileID: 2144592176}
 --- !u!1 &1606595284
 GameObject:
   m_ObjectHideFlags: 0
