@@ -65,22 +65,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Class\Message\Ack.cs" />
-    <Compile Include="Class\Message\CreateRoom\CreateRoomAck.cs" />
-    <Compile Include="Class\Message\CreateRoom\CreateRoomReq.cs" />
-    <Compile Include="Class\Message\JoinRoom\JoinRoomAck.cs" />
-    <Compile Include="Class\Message\JoinRoom\JoinRoomReq.cs" />
-    <Compile Include="Class\Message\Req.cs" />
-    <Compile Include="Class\MsgType.cs" />
-    <Compile Include="Class\MySerializerUtil.cs" />
-    <Compile Include="Class\NetManager1.cs" />
-    <Compile Include="Class\NetManager2.cs" />
+    <Compile Include="Scripts\CMD\Ack.cs" />
+    <Compile Include="Scripts\CMD\CreateRoom\CreateRoomAck.cs" />
+    <Compile Include="Scripts\CMD\CreateRoom\CreateRoomReq.cs" />
+    <Compile Include="Scripts\CMD\JoinRoom\JoinRoomAck.cs" />
+    <Compile Include="Scripts\CMD\JoinRoom\JoinRoomReq.cs" />
+    <Compile Include="Scripts\CMD\Req.cs" />
+    <Compile Include="Scripts\Manager\LoginManager.cs" />
+    <Compile Include="Scripts\MsgType.cs" />
+    <Compile Include="Scripts\MySerializerUtil.cs" />
+    <Compile Include="Scripts\Manager\NetManager1.cs" />
+    <Compile Include="Scripts\Manager\NetManager2.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Class\Message\Req.cs.meta" />
+    <None Include="Scripts\CMD\Req.cs.meta" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

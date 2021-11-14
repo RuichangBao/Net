@@ -43,11 +43,7 @@ namespace Server
                     IPEndPoint clienIPEndPoint = null;
                     byte[] data = udpcRecv.Receive(ref clienIPEndPoint);
 
-                    Req req = MySerializerUtil.Deserialize<Req>(data);
-                    if (req != null)
-                    {
-                        Parsing(req.msgType, data);
-                    }
+                    LoginManager.Instance.AddReceive(data);
                     IPEndPoint serverIPEndPoint = new IPEndPoint(clienIPEndPoint.Address, clientPort);
                     SendMessage(data, serverIPEndPoint);
                     //Console.WriteLine(string.Format("{0}[{1}]", serverIPEndPoint, message));
@@ -61,20 +57,6 @@ namespace Server
             }
         }
 
-        private byte[] Parsing(MsgType msgType, byte[] data)
-        {
-            switch (msgType)
-            {
-                case MsgType.TEST:
-                    break;
-                case MsgType.CreateRoom:
-                    CreateRoomReq req = MySerializerUtil.Deserialize<CreateRoomReq>(data);
-                    break;
-                default:
-                    return data;
-            }
-            return null;
-        }
 
         public void SendMessage(byte[] data, IPEndPoint iPEndPoint)
         {

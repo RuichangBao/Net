@@ -25,7 +25,7 @@ public class NetManager
     private NetManager()
     {
         udpcSend = new UdpClient();
-        Thread thrRecv = new Thread(ReceiveMessage);
+        Thread thrRecv = new Thread(RunServerReceive);
         thrRecv.Start();
     }
     public void SendMessage(Req req)
@@ -52,7 +52,7 @@ public class NetManager
     /// <summary>
     /// 接受数据
     /// </summary>
-    private void ReceiveMessage(object obj)
+    private void RunServerReceive(object obj)
     {
         IPEndPoint clienIPEndPoint = new IPEndPoint(IPAddress.Parse(ip), clientPort);
         UdpClient udpcRecv = new UdpClient(clienIPEndPoint);
