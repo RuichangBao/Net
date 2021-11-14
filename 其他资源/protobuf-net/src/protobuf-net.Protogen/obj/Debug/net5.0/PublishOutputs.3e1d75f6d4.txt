@@ -1,7 +1,0 @@
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\net5.0\publish\protogen.exe
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\net5.0\publish\protogen.dll
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\net5.0\publish\protogen.runtimeconfig.json
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\net5.0\publish\protobuf-net.Core.dll
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\net5.0\publish\protobuf-net.dll
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\net5.0\publish\protobuf-net.Reflection.dll
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.Protogen\bin\Debug\net5.0\publish\protogen.deps.json

@@ -1,9 +1,0 @@
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\bin\Debug\netstandard2.0\protobuf-net.BuildTools.deps.json
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\bin\Debug\netstandard2.0\protobuf-net.BuildTools.dll
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\obj\Debug\netstandard2.0\protobuf-net.BuildTools.csproj.AssemblyReference.cache
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\obj\Debug\netstandard2.0\protobuf-net.BuildTools.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\obj\Debug\netstandard2.0\protobuf-net.BuildTools.AssemblyInfoInputs.cache
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\obj\Debug\netstandard2.0\protobuf-net.BuildTools.AssemblyInfo.cs
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\obj\Debug\netstandard2.0\protobuf-net.BuildTools.csproj.CoreCompileInputs.cache
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\obj\Debug\netstandard2.0\protobuf-net.BuildTools.sourcelink.json
-C:\Users\baoruichang\Desktop\protobuf-net\src\protobuf-net.BuildTools\obj\Debug\netstandard2.0\protobuf-net.BuildTools.dll
