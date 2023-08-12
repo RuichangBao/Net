@@ -41,3 +41,4 @@ E:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.CoreCompileInputs.cache
 E:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.CopyComplete
 E:\GitProject\Net\Second\Server\obj\Debug\Server.exe
 E:\GitProject\Net\Second\Server\obj\Debug\Server.pdb
+E:\GitProject\Net\Second\Server\obj\Debug\Server.csproj.SuggestedBindingRedirects.cache

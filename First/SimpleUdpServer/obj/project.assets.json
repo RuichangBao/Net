@@ -8,7 +8,7 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\12948\\.nuget\\packages\\": {}
+    "C:\\Users\\baoruichang\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
@@ -16,11 +16,11 @@
       "projectUniqueName": "E:\\GitProject\\Net\\First\\SimpleUdpServer\\SimpleUdpServer.csproj",
       "projectName": "SimpleUdpServer",
       "projectPath": "E:\\GitProject\\Net\\First\\SimpleUdpServer\\SimpleUdpServer.csproj",
-      "packagesPath": "C:\\Users\\12948\\.nuget\\packages\\",
+      "packagesPath": "C:\\Users\\baoruichang\\.nuget\\packages\\",
       "outputPath": "E:\\GitProject\\Net\\First\\SimpleUdpServer\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\12948\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\baoruichang\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.403\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -17,11 +17,10 @@ namespace Server
 
 
         private UdpClient udpcRecv = null;
-        private IPEndPoint localIpep = null;
 
         public NetManager2()
         {
-            localIpep = new IPEndPoint(IPAddress.Parse(ip), serverPort); // 本机IP和监听端口号
+            IPEndPoint localIpep = new IPEndPoint(IPAddress.Parse(ip), serverPort); // 本机IP和监听端口号
             udpcRecv = new UdpClient(localIpep);
             Thread thrRecv = new Thread(ReceiveMessage);
             thrRecv.Start();
