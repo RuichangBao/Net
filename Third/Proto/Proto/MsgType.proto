@@ -1,0 +1,14 @@
+syntax = "proto3";
+//package msgtype;
+//option go_package = "msgtype;msgtype";
+
+// MsgType 游戏ID
+enum MsgType {
+  G2C_Push_ErrorCode = 0;
+  MessageVersion = 122701;
+}
+
+// ErrorCode 游戏错误码
+enum ErrorCode {
+  Unknown = 0;               // 未知错误
+}
