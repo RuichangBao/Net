@@ -9,49 +9,52 @@ using pb = global::Google.Protobuf;
 using pbc = global::Google.Protobuf.Collections;
 using pbr = global::Google.Protobuf.Reflection;
 using scg = global::System.Collections.Generic;
-/// <summary>Holder for reflection information generated from proto/MsgType.proto</summary>
-public static partial class MsgTypeReflection {
+namespace Protocol {
 
-  #region Descriptor
-  /// <summary>File descriptor for proto/MsgType.proto</summary>
-  public static pbr::FileDescriptor Descriptor {
-    get { return descriptor; }
-  }
-  private static pbr::FileDescriptor descriptor;
+  /// <summary>Holder for reflection information generated from proto/MsgType.proto</summary>
+  public static partial class MsgTypeReflection {
 
-  static MsgTypeReflection() {
-    byte[] descriptorData = global::System.Convert.FromBase64String(
-        string.Concat(
-          "ChNwcm90by9Nc2dUeXBlLnByb3RvKjcKB01zZ1R5cGUSFgoSRzJDX1B1c2hf",
-          "RXJyb3JDb2RlEAASFAoOTWVzc2FnZVZlcnNpb24Qzb4HKhgKCUVycm9yQ29k",
-          "ZRILCgdVbmtub3duEABiBnByb3RvMw=="));
-    descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { },
-        new pbr::GeneratedClrTypeInfo(new[] {typeof(global::MsgType), typeof(global::ErrorCode), }, null));
+    #region Descriptor
+    /// <summary>File descriptor for proto/MsgType.proto</summary>
+    public static pbr::FileDescriptor Descriptor {
+      get { return descriptor; }
+    }
+    private static pbr::FileDescriptor descriptor;
+
+    static MsgTypeReflection() {
+      byte[] descriptorData = global::System.Convert.FromBase64String(
+          string.Concat(
+            "ChNwcm90by9Nc2dUeXBlLnByb3RvEghQcm90b2NvbCo3CgdNc2dUeXBlEhYK",
+            "EkcyQ19QdXNoX0Vycm9yQ29kZRAAEhQKDk1lc3NhZ2VWZXJzaW9uEM2+ByoY",
+            "CglFcnJvckNvZGUSCwoHVW5rbm93bhAAYgZwcm90bzM="));
+      descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
+          new pbr::FileDescriptor[] { },
+          new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protocol.MsgType), typeof(global::Protocol.ErrorCode), }, null));
+    }
+    #endregion
+
   }
+  #region Enums
+  /// <summary>
+  /// MsgType 游戏ID
+  /// </summary>
+  public enum MsgType {
+    [pbr::OriginalName("G2C_Push_ErrorCode")] G2CPushErrorCode = 0,
+    [pbr::OriginalName("MessageVersion")] MessageVersion = 122701,
+  }
+
+  /// <summary>
+  /// ErrorCode 游戏错误码
+  /// </summary>
+  public enum ErrorCode {
+    /// <summary>
+    /// 未知错误
+    /// </summary>
+    [pbr::OriginalName("Unknown")] Unknown = 0,
+  }
+
   #endregion
 
 }
-#region Enums
-/// <summary>
-/// MsgType 游戏ID
-/// </summary>
-public enum MsgType {
-  [pbr::OriginalName("G2C_Push_ErrorCode")] G2CPushErrorCode = 0,
-  [pbr::OriginalName("MessageVersion")] MessageVersion = 122701,
-}
-
-/// <summary>
-/// ErrorCode 游戏错误码
-/// </summary>
-public enum ErrorCode {
-  /// <summary>
-  /// 未知错误
-  /// </summary>
-  [pbr::OriginalName("Unknown")] Unknown = 0,
-}
-
-#endregion
-
 
 #endregion Designer generated code

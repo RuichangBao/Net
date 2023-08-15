@@ -1,6 +1,5 @@
 syntax = "proto3";
-//package msgtype;
-//option go_package = "msgtype;msgtype";
+package Protocol;
 
 // MsgType 游戏ID
 enum MsgType {

@@ -23,8 +23,7 @@ if exist %PROJECT_PATH% (
 )
 
 @REM 拷贝编译后文件
-
 xcopy %csOutputPath% %PROJECT_PATH%\ /s/y
 
-@echo on
 pause
+@echo on
