@@ -24,9 +24,9 @@ namespace Protocol {
     static MsgTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNwcm90by9Nc2dUeXBlLnByb3RvEghQcm90b2NvbCo3CgdNc2dUeXBlEhYK",
-            "EkcyQ19QdXNoX0Vycm9yQ29kZRAAEhQKDk1lc3NhZ2VWZXJzaW9uEM2+ByoY",
-            "CglFcnJvckNvZGUSCwoHVW5rbm93bhAAYgZwcm90bzM="));
+            "ChNwcm90by9Nc2dUeXBlLnByb3RvEghQcm90b2NvbCo2CgdNc2dUeXBlEggK",
+            "BFplcm8QABIPCgtUZXN0UmVxdWVzdBABEhAKDFRlc3RSZXNwb25zZRACKhgK",
+            "CUVycm9yQ29kZRILCgdVbmtub3duEABiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protocol.MsgType), typeof(global::Protocol.ErrorCode), }, null));
@@ -39,8 +39,12 @@ namespace Protocol {
   /// MsgType 游戏ID
   /// </summary>
   public enum MsgType {
-    [pbr::OriginalName("G2C_Push_ErrorCode")] G2CPushErrorCode = 0,
-    [pbr::OriginalName("MessageVersion")] MessageVersion = 122701,
+    [pbr::OriginalName("Zero")] Zero = 0,
+    /// <summary>
+    ///22222
+    /// </summary>
+    [pbr::OriginalName("TestRequest")] TestRequest = 1,
+    [pbr::OriginalName("TestResponse")] TestResponse = 2,
   }
 
   /// <summary>

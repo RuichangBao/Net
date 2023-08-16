@@ -2,7 +2,12 @@ syntax = "proto3";
 package Protocol;
 
 message TestRequest {
-  int32 num1 = 1;
-  int64 num2 = 2;
-  string str1 = 3;
+  int32 Num1 = 1;
+  int64 Num2 = 2;
+  string Str1 = 3;
+}
+message  TestResponse {
+  int32 Num1 = 1;
+  int64 Num2 = 2;
+  string Str1 = 3;
 }

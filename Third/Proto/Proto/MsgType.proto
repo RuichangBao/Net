@@ -3,8 +3,9 @@ package Protocol;
 
 // MsgType 游戏ID
 enum MsgType {
-  G2C_Push_ErrorCode = 0;
-  MessageVersion = 122701;
+  Zero = 0;
+  TestRequest = 1;//22222
+  TestResponse = 2;
 }
 
 // ErrorCode 游戏错误码

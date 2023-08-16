@@ -1,21 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-using Google.Protobuf;
+﻿using UnityEngine;
 using Protocol;
+using UnityEngine.UI;
+using System.Text;
+
 public class Test : MonoBehaviour
 {
-    // Start is called before the first frame update
+    public Button btn;
+    public InputField inputField;
     void Start()
     {
-        Debug.LogError((int)MsgType.MessageVersion);
-        Debug.LogError((int)ErrorCode.Unknown);
-        TestRequest testRequest = new TestRequest();
+        _ = NetManager.Instance;
+        btn.onClick.AddListener(BtnOnClick);
+    }
+
+    private void BtnOnClick()
+    {
+        TestRequest request = new TestRequest
+        {
+            Num1 = 123,
+            Num2 = 456,
+            Str1 = "1466"
+        };
+        Debug.LogError("发送:" + inputField.text);
+        NetManager.Instance.SendMessage(MsgType.TestRequest, request);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }
