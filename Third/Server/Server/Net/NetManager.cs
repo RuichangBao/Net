@@ -1,4 +1,5 @@
 ﻿using Google.Protobuf;
+using Microsoft.VisualBasic;
 using Protocol;
 using System;
 using System.Collections.Generic;
@@ -14,43 +15,52 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    public class NetManager : Singleton<NetManager>, Init
+    public class NetManager : Singleton<NetManager>, IInit
     {
+        class TestClass
+        {
+            public byte[] data = new byte[2048];
+        }
         private int serverPort = 2023;
-        TcpListener server;
-        TcpClient client;
-        NetworkStream stream;
+        private TcpListener tcpListener;
+        private TcpClient tcpClient;
+        private NetworkStream networkStream;
+        private CBuffer cRequestBuff;
+        private CBuffer cResponseBuff;
         public void Init()
         {
-
+            cRequestBuff = new CBuffer();
+            cResponseBuff = new CBuffer();
         }
         public void Start()
         {
-            server = new TcpListener(IPAddress.Any, serverPort);
-            server.Start();
-            client = server.AcceptTcpClient();
-            stream = client.GetStream();
+            tcpListener = new TcpListener(IPAddress.Any, serverPort);
+            tcpListener.Start();
+            tcpClient = tcpListener.AcceptTcpClient();
+            networkStream = tcpClient.GetStream();
             byte[] buffer = new byte[1024];
             int bytesRead;
             while (true)
             {
-                bytesRead = stream.Read(buffer, 0, buffer.Length);
+                bytesRead = networkStream.Read(buffer, 0, buffer.Length);
                 if (bytesRead > 0)
                 {
-                    this.AAA(buffer);
-                    //Console.WriteLine(server.);
-
+                    this.AnalyzeRequest(buffer);
+                    Console.WriteLine(tcpClient);
                     this.SendMessage();
                 }
             }
         }
-        private void AAA(byte[] data)
+        /// <summary>
+        /// 解析Request
+        /// </summary>
+        /// <param name="data"></param>
+        private void AnalyzeRequest(byte[] data)
         {
-            Console.WriteLine(data.Length);
-            CRuningBuff cRuningBuff = new CRuningBuff(data);
-            data = cRuningBuff.data;
+            cRequestBuff.Update(data);
+            data = cRequestBuff.data;
             TestRequest message = new TestRequest();
-            message.MergeFrom(data, 0, cRuningBuff.length - sizeof(int) * 2);
+            message.MergeFrom(data, 0, cRequestBuff.length);
             Console.WriteLine(message.Num1);
             Console.WriteLine(message.Num2);
             Console.WriteLine(message.Str1);
@@ -68,10 +78,10 @@ namespace Server
                 Num2 = 2,
                 Str1 = "sdfdsfsd"
             };
-            CRuningBuff cRuningBuff = new CRuningBuff(MsgType.TestResponse, response);
-            byte[] data = cRuningBuff.GetBytes();
-            Console.WriteLine(data.Length);
-            stream.BeginWrite(data, 0, data.Length, HandleDatagramWritten, client);
+            cResponseBuff.Update(MsgType.TestResponse, response);
+            byte[] data = cResponseBuff.GetBytes();
+            int sendLength = cResponseBuff.GetSendLength();
+            networkStream.BeginWrite(data, 0, sendLength, HandleDatagramWritten, tcpClient);
         }
         private void HandleDatagramWritten(IAsyncResult ar)
         {

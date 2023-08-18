@@ -11,22 +11,22 @@ using UnityEngine.UIElements;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
 
-public class NetManager : Singleton<NetManager>, Init
+public class NetManager : Singleton<NetManager>, IInit
 {
     private TcpClient tcpClient;
-    NetworkStream networkStream;
-    private int serverPort = 2023;//服务器端口号
-    private int clientPort = 2024;//客户端端口号
-    private string clientIP = "127.0.0.1";
+    private NetworkStream networkStream;
+    private int serverPort = 2023;//服务器端口号;
     private string serverIP = "127.0.0.1";
-
-    //private Socket clientSocket;
+    private CBuffer cRequestBuff;
+    private CBuffer cResponseBuff;
+    public NetManager()
+    {
+        cRequestBuff = new CBuffer();
+        cResponseBuff = new CBuffer();
+    }
     public void Init()
     {
-        IPAddress clientIPAddress = IPAddress.Parse(clientIP);
-        IPEndPoint clientIPEndPoint = new IPEndPoint(clientIPAddress, clientPort);
-        tcpClient = new TcpClient(clientIPEndPoint);
-
+        tcpClient = new TcpClient();
         IPAddress serverIPAddress = IPAddress.Parse(serverIP);
         try
         {
@@ -40,25 +40,12 @@ public class NetManager : Singleton<NetManager>, Init
     }
     public bool SendMessage(MsgType msgType, IMessage msg)
     {
-        CRuningBuff cRuningBuff = new CRuningBuff(msgType, msg);
-        byte[] data = cRuningBuff.GetBytes();
-        networkStream.BeginWrite(data, 0, data.Length, HandleDatagramWritten, tcpClient);
+        cRequestBuff.Update(msgType,msg);
+        byte[] data = cRequestBuff.GetBytes();
+        int sendLength = cRequestBuff.GetSendLength();
+        networkStream.BeginWrite(data, 0, sendLength, HandleDatagramWritten, tcpClient);
         return true;
     }
-
-    public void SendMessage(byte[] data)
-    {
-        //networkStream.Write(data, 0, data.Length);
-        networkStream.BeginWrite(data, 0, data.Length, HandleDatagramWritten, tcpClient);
-        //clientSocket.Send(data);
-    }
-
-    public bool SendMessage(uint messageId, IMessage msg)
-    {
-        //tcpClient.se
-        return true;
-    }
-
     private void HandleDatagramWritten(IAsyncResult ar)
     {
     }
@@ -93,14 +80,17 @@ public class NetManager : Singleton<NetManager>, Init
             byte[] buffer = (byte[])ar.AsyncState;
             byte[] receivedBytes = new byte[numberOfReadBytes];
             Buffer.BlockCopy(buffer, 0, receivedBytes, 0, numberOfReadBytes);
-
-            CRuningBuff cRuningBuff = new CRuningBuff(receivedBytes);
-            Debug.LogError("协议：" + cRuningBuff.msgType);
+            this.AnalyzeResponse(receivedBytes);
             networkStream.BeginRead(buffer, 0, buffer.Length, HandleDatagramReceived, buffer);
         }
         catch (Exception ex)
         {
             Debug.LogError("读取服务器发送消息错误:" + ex);
         }
+    }
+    private void AnalyzeResponse(byte[] data)
+    {
+        cResponseBuff.Update(data);
+        Debug.LogError("协议：" + cResponseBuff.msgType);
     }
 }

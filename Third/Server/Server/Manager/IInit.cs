@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Server
 {
-    public interface Init
+    public interface IInit
     {
         void Init();
     }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 
 
-    public abstract class Singleton<T> where T : class, Init, new()
+    public abstract class Singleton<T> where T : class, IInit, new()
     {
         private static T instance;
         public static T Instance

@@ -9,7 +9,7 @@ public class Test : MonoBehaviour
     public InputField inputField;
     void Start()
     {
-        _ = NetManager.Instance;
+        //_ = NetManager.Instance;
         btn.onClick.AddListener(BtnOnClick);
     }
 
@@ -21,8 +21,8 @@ public class Test : MonoBehaviour
             Num2 = 456,
             Str1 = "1466"
         };
-        Debug.LogError("发送:" + inputField.text);
         NetManager.Instance.SendMessage(MsgType.TestRequest, request);
+
     }
 
     // Update is called once per frame

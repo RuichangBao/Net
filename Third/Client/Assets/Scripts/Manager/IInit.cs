@@ -1,7 +1,7 @@
 ﻿
 
 
-    public interface Init
-    {
+    public interface IInit
+{
         void Init();
     }
