@@ -24,9 +24,10 @@ namespace Protocol {
     static MsgTypeReflection() {
       byte[] descriptorData = global::System.Convert.FromBase64String(
           string.Concat(
-            "ChNwcm90by9Nc2dUeXBlLnByb3RvEghQcm90b2NvbCo2CgdNc2dUeXBlEggK",
-            "BFplcm8QABIPCgtUZXN0UmVxdWVzdBABEhAKDFRlc3RSZXNwb25zZRACKhgK",
-            "CUVycm9yQ29kZRILCgdVbmtub3duEABiBnByb3RvMw=="));
+            "ChNwcm90by9Nc2dUeXBlLnByb3RvEghQcm90b2NvbCpnCgdNc2dUeXBlEggK",
+            "BFplcm8QABIPCgtUZXN0UmVxdWVzdBABEhAKDFRlc3RSZXNwb25zZRACEhYK",
+            "EUNyZWF0ZVJvb21SZXF1ZXN0EOkHEhcKEkNyZWF0ZVJvb21SZXNwb25zZRDq",
+            "ByoYCglFcnJvckNvZGUSCwoHVW5rbm93bhAAYgZwcm90bzM="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Protocol.MsgType), typeof(global::Protocol.ErrorCode), }, null));
@@ -45,6 +46,11 @@ namespace Protocol {
     /// </summary>
     [pbr::OriginalName("TestRequest")] TestRequest = 1,
     [pbr::OriginalName("TestResponse")] TestResponse = 2,
+    /// <summary>
+    ///创建房间
+    /// </summary>
+    [pbr::OriginalName("CreateRoomRequest")] CreateRoomRequest = 1001,
+    [pbr::OriginalName("CreateRoomResponse")] CreateRoomResponse = 1002,
   }
 
   /// <summary>

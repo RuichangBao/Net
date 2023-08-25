@@ -6,6 +6,8 @@ enum MsgType {
   Zero = 0;
   TestRequest = 1;//22222
   TestResponse = 2;
+  CreateRoomRequest = 1001;//创建房间
+  CreateRoomResponse = 1002;
 }
 
 // ErrorCode 游戏错误码
