@@ -1,23 +1,16 @@
 ﻿using Google.Protobuf;
 using System;
-using System.Drawing;
 using System.Net;
 using System.Net.Sockets;
 using Protocol;
-using System.Threading;
-using UnityEditor.PackageManager;
-using System.Text;
-using UnityEngine.UIElements;
 using UnityEngine;
-using UnityEditor.Experimental.GraphView;
-using static Google.Protobuf.Reflection.FieldOptions.Types;
 
 public class NetManager : Singleton<NetManager>, IInit
 {
     private TcpClient tcpClient;
     private NetworkStream networkStream;
     private int serverPort = 2023;//服务器端口号;
-    private string serverIP = "127.0.0.1";
+    private string serverIP = "192.168.0.111";
     private CBuffer cRequestBuff;
     private CBuffer cResponseBuff;
     public NetManager()

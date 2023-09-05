@@ -27,7 +27,6 @@ namespace Server
             tcpListener.Start();
             tcpClient = tcpListener.AcceptTcpClient();
             networkStream = tcpClient.GetStream();
-            //byte[] buffer = new byte[10240000];
             byte[] buffer = new byte[1024];
             int bytesRead;
             while (true)
@@ -35,7 +34,7 @@ namespace Server
                 bytesRead = networkStream.Read(buffer, 0, buffer.Length);
                 if (bytesRead > 0)
                 {
-                    Console.WriteLine("接收到的包长度:" + bytesRead);
+                    Console.WriteLine("接收到的包长度:" + bytesRead+" IP: "+ tcpClient.Client.RemoteEndPoint.ToString());
                     this.AnalyzeRequest(buffer, bytesRead);
                 }
             }
@@ -97,7 +96,7 @@ namespace Server
                     break;
                 }
             }
-            this.SendMessage();
+            //this.SendMessage();
         }
 
         private void SendMessage()

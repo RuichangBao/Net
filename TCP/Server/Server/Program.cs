@@ -8,10 +8,6 @@ namespace Server
     {
         static void Main(string[] args)
         {
-            //string str = "你好哈哈哈";
-            //byte[] data = Encoding.UTF8.GetBytes(str);
-            //Console.WriteLine(data.Length);
-            //return;
             Console.WriteLine("s:开启服务器");
             Console.WriteLine("c:退出");
             Thread thread = new Thread(NetManager.Instance.Start);
