@@ -21,11 +21,10 @@ public class NetManager : Singleton<NetManager>, IInit
     public void Init()
     {
         tcpClient = new TcpClient();
-        IPAddress serverIPAddress = IPAddress.Parse(serverIP);
         try
         {
             Debug.LogError("客户端请求连接到服务器");
-            tcpClient.BeginConnect(serverIPAddress, serverPort, HandleTcpServerConnected, tcpClient);
+            tcpClient.BeginConnect(serverIP, serverPort, HandleTcpServerConnected, tcpClient);
         }
         catch (Exception ex)
         {
@@ -40,6 +39,10 @@ public class NetManager : Singleton<NetManager>, IInit
       
         networkStream.BeginWrite(data, 0, sendLength, HandleDatagramWritten, tcpClient);
         return true;
+    }
+    public void TestSendMessage(byte[] data)
+    {
+        networkStream.BeginWrite(data, 0, data.Length, HandleDatagramWritten, tcpClient);
     }
     private void HandleDatagramWritten(IAsyncResult ar)
     {

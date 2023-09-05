@@ -23,11 +23,11 @@ public class Test : MonoBehaviour
             Str1 = "1466"
         };
         NetManager.Instance.SendMessage(MsgType.TestRequest, request);
-        //for (int i = 0; i < 100000; i++)
-        //{
-        //    request.Num1 = i;
-        //    NetManager.Instance.SendMessage(MsgType.TestRequest, request);
-        //}
+
+
+        string str = "测试数据";
+        byte[] data = Encoding.UTF8.GetBytes(str);
+        //NetManager.Instance.TestSendMessage(data);
     }
 
     // Update is called once per frame
