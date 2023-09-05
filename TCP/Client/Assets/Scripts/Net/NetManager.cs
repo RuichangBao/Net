@@ -10,6 +10,7 @@ using System.Text;
 using UnityEngine.UIElements;
 using UnityEngine;
 using UnityEditor.Experimental.GraphView;
+using static Google.Protobuf.Reflection.FieldOptions.Types;
 
 public class NetManager : Singleton<NetManager>, IInit
 {
@@ -40,9 +41,10 @@ public class NetManager : Singleton<NetManager>, IInit
     }
     public bool SendMessage(MsgType msgType, IMessage msg)
     {
-        cRequestBuff.Update(msgType,msg);
+        cRequestBuff.Update(msgType, msg);
         byte[] data = cRequestBuff.GetBytes();
         int sendLength = cRequestBuff.GetSendLength();
+      
         networkStream.BeginWrite(data, 0, sendLength, HandleDatagramWritten, tcpClient);
         return true;
     }
@@ -71,6 +73,7 @@ public class NetManager : Singleton<NetManager>, IInit
         int numberOfReadBytes = 0;
         try
         {
+            //读取的字节数
             numberOfReadBytes = networkStream.EndRead(ar);
             if (numberOfReadBytes < 1)
             {
@@ -90,7 +93,94 @@ public class NetManager : Singleton<NetManager>, IInit
     }
     private void AnalyzeResponse(byte[] data)
     {
-        cResponseBuff.Update(data);
-        Debug.LogError("协议：" + cResponseBuff.msgType);
+        int bytesRead = data.Length;
+        byte[] tempData;
+        int cacheLength = cResponseBuff.BytesRead;
+        if (cacheLength != 0)
+        {
+            tempData = new byte[bytesRead + cacheLength];
+            Array.Copy(cResponseBuff.data, 0, tempData, 0, cacheLength);
+            Array.Copy(data, 0, tempData, cacheLength, bytesRead);
+        }
+        else
+        {
+            tempData = new byte[bytesRead];
+            Array.Copy(data, 0, tempData, 0, bytesRead);
+        }
+
+        int intLength = sizeof(int);
+        byte[] msgTypeBytes = new byte[intLength];
+        byte[] lengthBytes = new byte[intLength];
+        int msgType = 0;
+        int length = 0;
+        int startIndex = 0;
+        //剩余数据长度
+        int endNum = 0;
+        while (true)
+        {
+            endNum = tempData.Length - startIndex - 2 * intLength;
+            //剩余数据不是完整的协议号和长度
+            if (endNum < 0)
+            {
+                cResponseBuff.Update(tempData, startIndex);
+                break;
+            }
+            Array.Copy(tempData, startIndex, msgTypeBytes, 0, intLength);
+            Array.Copy(tempData, startIndex + intLength, lengthBytes, 0, intLength);
+            msgType = BitConverter.ToInt32(msgTypeBytes, 0);
+            length = BitConverter.ToInt32(lengthBytes, 0);
+            if (endNum < length)
+            {
+                cResponseBuff.Update(tempData, startIndex);
+                break;
+            }
+            byte[] requestData = new byte[length];
+            Array.Copy(tempData, startIndex + 2 * intLength, requestData, 0, length);
+            IMessage message = this.Deserialization(msgType, requestData, length);
+            startIndex = startIndex + 2 * intLength + length;
+            cResponseBuff.AddRequest(message);
+            if (endNum <= 0)
+            {
+                break;
+            }
+        }
+        while (true)
+        {
+            IMessage message = cResponseBuff.Dequeue();
+            if (message == null)
+                break;
+            TestResponse testResponse = message as TestResponse;
+            if (testResponse != null)
+            {
+                Debug.LogError(testResponse.Num1);
+            }
+        }
+    }
+
+    private IMessage Deserialization(int msgType, byte[] data, int length)
+    {
+        MsgType msgType1 = (MsgType)msgType;
+        IMessage message = null;
+        switch (msgType1)
+        {
+            case MsgType.Zero:
+
+                break;
+            case MsgType.TestRequest:
+                message = new TestRequest();
+                message.MergeFrom(data, 0, length);
+                break;
+            case MsgType.TestResponse:
+                message = new TestResponse();
+                message.MergeFrom(data, 0, length);
+                break;
+            case MsgType.CreateRoomRequest:
+                break;
+            case MsgType.CreateRoomResponse:
+                break;
+            default:
+                break;
+        }
+        return message;
     }
 }

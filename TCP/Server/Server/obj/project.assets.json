@@ -8,24 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\baoruichang\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\12948\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\GitProject\\Net\\Third\\Server\\Server\\Server.csproj",
+      "projectUniqueName": "E:\\GitProject\\Net\\TCP\\Server\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "E:\\GitProject\\Net\\Third\\Server\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\baoruichang\\.nuget\\packages\\",
-      "outputPath": "E:\\GitProject\\Net\\Third\\Server\\Server\\obj\\",
+      "projectPath": "E:\\GitProject\\Net\\TCP\\Server\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\12948\\.nuget\\packages\\",
+      "outputPath": "E:\\GitProject\\Net\\TCP\\Server\\Server\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\baoruichang\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\12948\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -66,7 +61,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

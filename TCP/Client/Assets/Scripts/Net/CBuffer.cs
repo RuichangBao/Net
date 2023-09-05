@@ -1,7 +1,7 @@
 ﻿using Google.Protobuf;
 using Protocol;
 using System;
-using System.ComponentModel;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class CBuffer
@@ -12,25 +12,30 @@ public class CBuffer
     /// </summary>
     public int length;
     public byte[] data;
+    public int BytesRead { get; set; }
     private readonly int bufferSize = 65535;
     private byte[] msgTypeBytes;
     private byte[] lengthBytes;
     private int intLength = 0;
+    private Queue<IMessage> requestQueue;
     public CBuffer()
     {
         intLength = sizeof(int);
         this.msgType = 0;
         this.length = 0;
-        data = new byte[bufferSize];
+        this.data = new byte[bufferSize];
         msgTypeBytes = new byte[intLength];
         lengthBytes = new byte[intLength];
+        requestQueue = new Queue<IMessage>();
     }
     public byte[] GetBytes()
     {
-        byte[] tempData = new byte[this.length + intLength * 2];
+        byte[] tempData = new byte[length + intLength * 2];
         Array.Copy(msgTypeBytes, tempData, intLength);
         Array.Copy(lengthBytes, 0, tempData, intLength, intLength);
-        Array.Copy(this.data, 0, tempData, intLength * 2, this.length);
+        Array.Copy(this.data, 0, tempData, intLength * 2, length);
+
+        Debug.LogError("length:" + this.length + "     " + tempData.Length);
         return tempData;
     }
     public void Clear()
@@ -38,14 +43,10 @@ public class CBuffer
         this.msgType = 0;
         this.length = 0;
     }
-
-    internal void Update(byte[] data)
+    public void Update(byte[] data, int startIndex)
     {
-        Array.Copy(data, 0, msgTypeBytes, 0, intLength);
-        Array.Copy(data, intLength, lengthBytes, 0, intLength);
-        msgType = BitConverter.ToInt32(msgTypeBytes, 0);
-        length = BitConverter.ToInt32(lengthBytes, 0);
-        Array.Copy(data, intLength * 2, this.data, 0, length);
+        this.BytesRead = data.Length - startIndex;
+        Array.Copy(data, startIndex, this.data, 0, BytesRead);
     }
     internal void Update(MsgType msgType, IMessage message)
     {
@@ -59,6 +60,20 @@ public class CBuffer
         msgTypeBytes = BitConverter.GetBytes(this.msgType);
         lengthBytes = BitConverter.GetBytes(length);
     }
+
+    public void AddRequest(IMessage message)
+    {
+        requestQueue.Enqueue(message);
+    }
+
+    public IMessage Dequeue()
+    {
+        if (requestQueue.Count <= 0)
+            return null;
+        IMessage message = requestQueue.Dequeue();
+        return message;
+    }
+
     /// <summary>
     /// 获取发送长度
     /// </summary>
