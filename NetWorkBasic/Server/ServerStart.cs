@@ -30,7 +30,8 @@ namespace Server
 
             string msgRcv = Encoding.UTF8.GetString(dataRcv, 0, lenRcv);
             Console.WriteLine("客户端数据：" + msgRcv);
-
+            //https://www.qiqiker.com/course/74/task/2444/show
+            while (true) { }
             Console.ReadKey();
         }
     }
