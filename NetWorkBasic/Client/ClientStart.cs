@@ -19,20 +19,27 @@ namespace Client
             socket.Connect(endPoint);
             Console.WriteLine("链接服务器成功");
 
-            //接受数据缓存
-            byte[] dataRcv = new byte[1024];
-            int lenRcv = socket.Receive(dataRcv);
-            string msgRcv = Encoding.UTF8.GetString(dataRcv, 0, lenRcv);
-            Console.WriteLine("服务器数据：" + msgRcv);
-
-            socket.Send(Encoding.UTF8.GetBytes("客户端向服务器发送测试数据"));
-
-            lenRcv = socket.Receive(dataRcv);
-            msgRcv = Encoding.UTF8.GetString(dataRcv, 0, lenRcv);
-            Console.WriteLine("收到来自服务器数据：" + msgRcv);
             while (true)
             {
+                //接受数据缓存
+                byte[] dataRcv = new byte[1024];
+                int lenRcv = socket.Receive(dataRcv);
+                string msgRcv = Encoding.UTF8.GetString(dataRcv, 0, lenRcv);
+                Console.WriteLine("收到来自服务器数据：" + msgRcv);
 
+                string write;
+                do
+                {
+                    write = Console.ReadLine();
+                } while (write.Length<=0);
+
+                if (write.Equals("close"))
+                {
+                    socket.Shutdown(SocketShutdown.Both);
+                    socket.Close();
+                    break;
+                }
+                socket.Send(Encoding.UTF8.GetBytes(write));
             }
         }
     }

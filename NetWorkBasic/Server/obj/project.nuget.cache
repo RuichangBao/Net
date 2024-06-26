@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "3nB9l0nicUIbRXzWAekTrG9hZ3lGRt+pVw99nscJazNYHFyU8wssAd944DLEESprA0U/MnGXqdU6bhBZzeAyMw==",
+  "dgSpecHash": "UseYrT4aAHNL31NVwKyXSjpi0t41ZNxfoKWS/8yZ4yQRxrqcuTgMCS9BQsA5WZ97WOQuvz9zv9TTZBfsWSM2aQ==",
   "success": true,
-  "projectFilePath": "E:\\GitProject\\Net\\NetWorkBasic\\Server\\Server.csproj",
+  "projectFilePath": "D:\\GitProject\\Net\\NetWorkBasic\\Server\\Server.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
