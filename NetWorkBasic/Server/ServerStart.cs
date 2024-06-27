@@ -61,34 +61,10 @@ namespace Server
             Socket clientSocket = socket.EndAccept(ar);
             socket.BeginAccept(new AsyncCallback(ClientConnectCB), new SKTParams { skt = socket, info = "test" });
             clientSocket.Send(Encoding.UTF8.GetBytes("客户端链接成功"));
-            //接收数据缓存
-            while (true)
-            {
-                try
-                {
-                    byte[] dataRcv = new byte[1024];
-                    int lenRcv = clientSocket.Receive(dataRcv);
-                    if (lenRcv <= 0)
-                    {
-                        Console.WriteLine("客户端已经断开链接");
-                        clientSocket.Shutdown(SocketShutdown.Both);
-                        clientSocket.Close();
-                        return;
-                    }
-                    string msgRcv = Encoding.UTF8.GetString(dataRcv, 0, lenRcv);
-                    Console.WriteLine($"客户端{clientSocket.LocalEndPoint}index:{index}数据：" + msgRcv);
-                    clientSocket.Send(Encoding.UTF8.GetBytes("服务器向客户端发送数据:" + msgRcv));
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e.ToString());
-                    Console.WriteLine("服务器主动关闭客户端");
-                    clientSocket.Shutdown(SocketShutdown.Both);
-                    clientSocket.Close();
-                    return;
-                }
-
-            }
+            //异步接收数据缓存
+            byte[] dataRcv = new byte[1024];
+            //int offset, int size, SocketFlags socketFlags,
+            clientSocket.BeginReceive(dataRcv,0,1023, SocketFlags.Peek,new AsyncCallback((IAsyncResult ar) => { }),clientSocket);
         }
 
         private static void NewClientLink(object? obj)
@@ -126,9 +102,5 @@ namespace Server
             }
         }
 
-        //private static void ClientConnectCB(Socket ar)
-        //{
-
-        //}
-    }
+    } 
 }
