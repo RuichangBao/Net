@@ -31,7 +31,7 @@ namespace Client
                 do
                 {
                     write = Console.ReadLine();
-                } while (write.Length<=0);
+                } while (write.Length <= 0);
 
                 if (write.Equals("close"))
                 {
