@@ -11,7 +11,6 @@ namespace Client
         static void Main(string[] args)
         {
             Console.WriteLine("客户端主线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
-            //CreateBasicClient();
             CreateAsyncClient();
             while (true) { }
         }
@@ -22,7 +21,7 @@ namespace Client
             EndPoint endPoint = new IPEndPoint(iPAddress, 1994);
             try
             {
-                socket.BeginConnect(endPoint, new AsyncCallback(ServerConnectCB), socket);
+                socket.BeginConnect(endPoint, ServerConnectCB, socket);
             }
             catch (Exception ex)
             {
@@ -40,7 +39,7 @@ namespace Client
                 //接受数据缓存
                 byte[] dataRcv = new byte[1024];
                 AsyncReceiveData asyncReceiveData = new AsyncReceiveData { socket = socket, data = dataRcv };
-                socket.BeginReceive(dataRcv, 0, 1024, SocketFlags.None, new AsyncCallback(AsyncReceive), asyncReceiveData);
+                socket.BeginReceive(dataRcv, 0, 1024, SocketFlags.None, AsyncReceive, asyncReceiveData);
             }
             catch (Exception ex)
             {
@@ -83,20 +82,20 @@ namespace Client
                 }
                 byte[] sendDatas = Encoding.UTF8.GetBytes(write);
                 //1:
-                //socket.BeginSend(sendDatas, 0, sendDatas.Length, SocketFlags.None, new AsyncCallback(AsyncSend), socket);
+                //socket.BeginSend(sendDatas, 0, sendDatas.Length, SocketFlags.None, AsyncSend, socket);
                 //2:
                 NetworkStream networkStream = null;
                 try
                 {
                     networkStream = new NetworkStream(socket);
-                    networkStream.BeginWrite(sendDatas, 0, sendDatas.Length, new AsyncCallback(AsyncNetworkStreamSend), networkStream);
+                    networkStream.BeginWrite(sendDatas, 0, sendDatas.Length, AsyncNetworkStreamSend, networkStream);
                 }
                 catch (Exception ex)
                 {
                     Console.WriteLine("异步发送数据：" + ex.ToString());
                 }
                 Array.Clear(dataRcv, 0, dataRcv.Length);
-                socket.BeginReceive(dataRcv, 0, 1024, SocketFlags.None, new AsyncCallback(AsyncReceive), asyncReceiveData);
+                socket.BeginReceive(dataRcv, 0, 1024, SocketFlags.None, AsyncReceive, asyncReceiveData);
             }
             catch (Exception ex)
             {
@@ -127,39 +126,5 @@ namespace Client
             public Socket socket;
             public byte[] data;
         }
-        #region 同步链接
-        private static void CreateBasicClient()
-        {
-            Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            IPAddress iPAddress = new IPAddress(new byte[] { 127, 0, 0, 1 });
-            EndPoint endPoint = new IPEndPoint(iPAddress, 1994);
-            socket.Connect(endPoint);
-            Console.WriteLine("链接服务器成功");
-
-            while (true)
-            {
-                //接受数据缓存
-                //byte[] dataRcv = new byte[1024];
-                //int lenRcv = socket.Receive(dataRcv);
-                //string msgRcv = Encoding.UTF8.GetString(dataRcv, 0, lenRcv);
-                //Console.WriteLine("收到来自服务器数据：" + msgRcv);
-
-                string write;
-                do
-                {
-                    write = Console.ReadLine();
-                } while (write.Length <= 0);
-
-                if (write.Equals("close"))
-                {
-                    socket.Shutdown(SocketShutdown.Both);
-                    socket.Close();
-                    break;
-                }
-                Console.WriteLine("向服务器发送数据");
-                socket.Send(Encoding.UTF8.GetBytes(write));
-            }
-        }
-        #endregion
     }
 }
