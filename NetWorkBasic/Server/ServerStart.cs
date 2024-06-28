@@ -1,8 +1,7 @@
-﻿using System.ComponentModel;
+﻿using NetPackage;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
 
 namespace Server
 {
@@ -16,7 +15,7 @@ namespace Server
             Console.WriteLine("服务器主线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
             while (true)
             {
-
+                LoginMsg loginMsg = new LoginMsg();
             }
         }
 
@@ -44,7 +43,6 @@ namespace Server
                 Socket socket = ar.AsyncState as Socket;
                 Socket clientSocket = socket.EndAccept(ar); 
                 byte[] sendDatas = Encoding.UTF8.GetBytes("客户端链接成功");
-                //clientSocket.Send(sendDatas);
                 clientSocket.BeginSend(sendDatas, 0, sendDatas.Length, SocketFlags.None, AsyncSend, clientSocket);
                 //异步接收数据缓存
                 byte[] dataRcv = new byte[1024];
@@ -78,20 +76,20 @@ namespace Server
                 string clientData = Encoding.UTF8.GetString(resultData);
                 Console.WriteLine("接收消息，线程id:" + Thread.CurrentThread.ManagedThreadId.ToString() + "   内容：" + clientData);
                 byte[] sendDatas = Encoding.UTF8.GetBytes("服务器消息：" + clientData);
-                //clientSocket.Send(sendDatas);
                 //1:
-                //clientSocket.BeginSend(sendDatas, 0, sendDatas.Length, SocketFlags.None, AsyncSend, clientSocket);
+                clientSocket.BeginSend(sendDatas, 0, sendDatas.Length, SocketFlags.None, AsyncSend, clientSocket);
                 //2:
-                NetworkStream networkStream = null;
-                try
-                {
-                    networkStream = new NetworkStream(clientSocket);
-                    networkStream.BeginWrite(sendDatas, 0, sendDatas.Length, AsyncNetworkStreamSend, networkStream);
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine("异步发送数据：" + ex.ToString());
-                }
+                //NetworkStream networkStream = null;
+                //try
+                //{
+                //    networkStream = new NetworkStream(clientSocket);
+                //    networkStream.BeginWrite(sendDatas, 0, sendDatas.Length, AsyncNetworkStreamSend, networkStream);
+                //}
+                //catch (Exception ex)
+                //{
+                //    Console.WriteLine("异步发送数据：" + ex.ToString());
+                //}
+
                 clientSocket.BeginReceive(dataRcv, 0, 1024, SocketFlags.None, AsyncReceive, asyncReceiveData);
             }
             catch (Exception ex)
