@@ -41,14 +41,15 @@ namespace Server
         {
             try
             {
-                //Console.WriteLine("客户端链接线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
+                Console.WriteLine("客户端链接线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
                 Socket socket = ar.AsyncState as Socket;
                 Socket clientSocket = socket.EndAccept(ar);
-                
+                //ConnectSuccesMsg connectSuccesMsg = new ConnectSuccesMsg { info = "链接服务器成功AAAAAAAAA" };
+                //SendMessage(clientSocket, connectSuccesMsg);
                 //异步接收数据缓存
-                byte[] data = new byte[1024];
-                AsyncReceiveData asyncReceiveData = new AsyncReceiveData { socket = clientSocket, data = data };
-                clientSocket.BeginReceive(data, 0, NetPackage.headLength, SocketFlags.None, AsyncReceive, asyncReceiveData);
+                NetPackage netPackage = new NetPackage();
+                AsyncReceiveData asyncReceiveData = new AsyncReceiveData { socket = clientSocket, netPackage = netPackage };
+                clientSocket.BeginReceive(netPackage.headBuffer, 0, NetPackage.headLength, SocketFlags.None, AsyncReceiveHead, asyncReceiveData);
                 socket.BeginAccept(ClientConnectCB, socket);
             }
             catch (Exception ex)
@@ -57,13 +58,13 @@ namespace Server
             }
         }
         /// <summary>异步接受客户端消息头</summary>
-        private static void AsyncReceive(IAsyncResult ar)
+        private static void AsyncReceiveHead(IAsyncResult ar)
         {
             try
             {
                 AsyncReceiveData asyncReceiveData = ar.AsyncState as AsyncReceiveData;
                 Socket clientSocket = asyncReceiveData.socket;
-
+                NetPackage netPackage = asyncReceiveData.netPackage;
                 int length = clientSocket.EndReceive(ar);//本次接收的字节数
                 if (length <= 0)
                 {
@@ -72,23 +73,55 @@ namespace Server
                     clientSocket.Close();
                     return;
                 }
-                byte[] data = asyncReceiveData.data;
-                byte[] resultData = new byte[length];
-                Array.Copy(data, 0, resultData, 0, length);
-                string str = Encoding.UTF8.GetString(resultData);
-                Console.WriteLine("客户端消息：" + str);
-                str = "[" + str;
-                byte[] sendData = Encoding.UTF8.GetBytes(str);
-                Console.WriteLine("向客户端发送消息：" + str);
-                clientSocket.BeginSend(sendData, 0, sendData.Length, SocketFlags.None, (IAsyncResult ar) => { }, clientSocket);
-                clientSocket.BeginReceive(data, 0, NetPackage.headLength, SocketFlags.None, AsyncReceive, asyncReceiveData);
+                netPackage.headIndex += length;
+                if (netPackage.headIndex < NetPackage.headLength)
+                {
+                    clientSocket.BeginReceive(netPackage.headBuffer, netPackage.headIndex, NetPackage.headLength - netPackage.headIndex, SocketFlags.None, AsyncReceiveHead, asyncReceiveData);
+                }
+                else
+                {
+                    netPackage.InitBodyBuff();
+                    clientSocket.BeginReceive(netPackage.bodyBuffer, 0, netPackage.bodyLength, SocketFlags.None, AsyncReceiveBody, asyncReceiveData);
+                }
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine("客户端非正常下线：" + ex.ToString());
             }
         }
+        private static void AsyncReceiveBody(IAsyncResult ar)
+        {
+            try
+            {
+                AsyncReceiveData asyncReceiveData = ar.AsyncState as AsyncReceiveData;
+                Socket clientSocket = asyncReceiveData.socket;
+                NetPackage netPackage = asyncReceiveData.netPackage;
+                int length = clientSocket.EndReceive(ar);//本次接收的字节数
+                if (length <= 0)
+                {
+                    Console.WriteLine("客户端已经下线");
+                    clientSocket.Shutdown(SocketShutdown.Both);
+                    clientSocket.Close();
+                    return;
+                }
+                netPackage.bodyIndex += length;
+                if (netPackage.bodyIndex < netPackage.bodyLength)
+                {
+                    clientSocket.BeginReceive(netPackage.bodyBuffer, netPackage.bodyIndex, netPackage.bodyLength - netPackage.bodyIndex, SocketFlags.None, AsyncReceiveBody, asyncReceiveData);
+                }
+                else
+                {
+                    object obj = SerializerUtil.DeSerializer(netPackage.bodyBuffer);
+                    Console.WriteLine("客户端数据接收完成" + obj.ToString());
+                }
 
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("客户端非正常下线：" + ex.ToString());
+            }
+        }
         ///<summary>异步发送数据</summary>
         private static void AsyncNetworkStreamSend(IAsyncResult ar)
         {
@@ -122,7 +155,7 @@ namespace Server
         public class AsyncReceiveData
         {
             public Socket socket;
-            public byte[] data;
+            public NetPackage netPackage;
         }
     }
 }
