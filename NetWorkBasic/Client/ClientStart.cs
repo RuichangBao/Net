@@ -1,7 +1,7 @@
 ﻿using NetUtilPackage;
 using System.Net;
 using System.Net.Sockets;
-
+//https://www.qiqiker.com/course/74/task/2469/show
 
 namespace Client
 {
@@ -101,6 +101,7 @@ namespace Client
             byteLength.CopyTo(sendDatas, 0);
             datas.CopyTo(sendDatas, 4);
             Console.WriteLine("数据长度：" + dataLength);
+            //---------------分段发送 测试网络分包处理 Start-------------------------------
             //已经发送的长度
             int sendLength = 0;
             int[] sendCouts = new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 410, 4444, 88888 };
@@ -130,7 +131,7 @@ namespace Client
             catch (Exception ex)
             {
                 Console.WriteLine("异步发送数据错误：" + ex.ToString());
-            }
+            }//---------------分段发送 测试网络分包处理 End-------------------------------
         }
 
 
