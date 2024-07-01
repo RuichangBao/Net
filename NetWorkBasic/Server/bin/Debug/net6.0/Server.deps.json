@@ -8,15 +8,15 @@
     ".NETCoreApp,Version=v6.0": {
       "Server/1.0.0": {
         "dependencies": {
-          "NetUtilPackage": "1.0.0"
+          "Client": "1.0.0"
         },
         "runtime": {
           "Server.dll": {}
         }
       },
-      "NetUtilPackage/1.0.0": {
+      "Client/1.0.0": {
         "runtime": {
-          "NetUtilPackage.dll": {}
+          "Client.dll": {}
         }
       }
     }
@@ -27,7 +27,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "NetUtilPackage/1.0.0": {
+    "Client/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

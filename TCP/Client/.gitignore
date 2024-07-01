@@ -1,9 +1,0 @@
-*.vs
-*.sln
-*.csproj
-Library
-UnityPackageManager
-Temp
-obj
-Logs
-Packages

@@ -2,49 +2,44 @@
   "version": 3,
   "targets": {
     "net6.0": {
-      "NetUtilPackage/1.0.0": {
+      "Client/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "compile": {
-          "bin/placeholder/NetUtilPackage.dll": {}
+          "bin/placeholder/Client.dll": {}
         },
         "runtime": {
-          "bin/placeholder/NetUtilPackage.dll": {}
+          "bin/placeholder/Client.dll": {}
         }
       }
     }
   },
   "libraries": {
-    "NetUtilPackage/1.0.0": {
+    "Client/1.0.0": {
       "type": "project",
-      "path": "../NetPackage/NetUtilPackage.csproj",
-      "msbuildProject": "../NetPackage/NetUtilPackage.csproj"
+      "path": "../Client/Client.csproj",
+      "msbuildProject": "../Client/Client.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
-      "NetUtilPackage >= 1.0.0"
+      "Client >= 1.0.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\BK\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\12948\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitProject\\Net\\NetWorkBasic\\Server\\Server.csproj",
+      "projectUniqueName": "E:\\GitProject\\Net\\NetWorkBasic\\Server\\Server.csproj",
       "projectName": "Server",
-      "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\Server\\Server.csproj",
-      "packagesPath": "C:\\Users\\BK\\.nuget\\packages\\",
-      "outputPath": "D:\\GitProject\\Net\\NetWorkBasic\\Server\\obj\\",
+      "projectPath": "E:\\GitProject\\Net\\NetWorkBasic\\Server\\Server.csproj",
+      "packagesPath": "C:\\Users\\12948\\.nuget\\packages\\",
+      "outputPath": "E:\\GitProject\\Net\\NetWorkBasic\\Server\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\BK\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\12948\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -58,8 +53,8 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj": {
-              "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj"
+            "E:\\GitProject\\Net\\NetWorkBasic\\Client\\Client.csproj": {
+              "projectPath": "E:\\GitProject\\Net\\NetWorkBasic\\Client\\Client.csproj"
             }
           }
         }
@@ -89,7 +84,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

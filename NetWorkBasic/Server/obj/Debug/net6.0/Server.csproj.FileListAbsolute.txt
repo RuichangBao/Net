@@ -31,3 +31,9 @@ D:\GitProject\Net\NetWorkBasic\Server\obj\Debug\net6.0\Server.csproj.AssemblyRef
 D:\GitProject\Net\NetWorkBasic\Server\obj\Debug\net6.0\Server.csproj.CopyComplete
 D:\GitProject\Net\NetWorkBasic\Server\bin\Debug\net6.0\NetUtilPackage.dll
 D:\GitProject\Net\NetWorkBasic\Server\bin\Debug\net6.0\NetUtilPackage.pdb
+E:\GitProject\Net\NetWorkBasic\Server\obj\Debug\net6.0\Server.csproj.CopyComplete
+E:\GitProject\Net\NetWorkBasic\Server\bin\Debug\net6.0\Client.deps.json
+E:\GitProject\Net\NetWorkBasic\Server\bin\Debug\net6.0\Client.runtimeconfig.json
+E:\GitProject\Net\NetWorkBasic\Server\bin\Debug\net6.0\Client.exe
+E:\GitProject\Net\NetWorkBasic\Server\bin\Debug\net6.0\Client.dll
+E:\GitProject\Net\NetWorkBasic\Server\bin\Debug\net6.0\Client.pdb
