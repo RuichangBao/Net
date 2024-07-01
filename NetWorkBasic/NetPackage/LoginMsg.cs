@@ -1,7 +1,7 @@
 ﻿namespace NetUtilPackage
 {
     [Serializable]
-    public class LoginMsg
+    public class LoginMsg: NetMsg
     {
         public int serverId;
         public string account;

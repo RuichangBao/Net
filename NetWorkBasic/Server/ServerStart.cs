@@ -43,6 +43,8 @@ namespace Server
                 Console.WriteLine("客户端链接线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
                 Socket socket = ar.AsyncState as Socket;
                 Socket clientSocket = socket.EndAccept(ar);
+                ConnectSuccesMsg connectSuccesMsg = new ConnectSuccesMsg { info = "链接服务器成功AAAAAAAAA" };
+                SendMessage(clientSocket, connectSuccesMsg);
                 //异步接收数据缓存
                 NetPackage netPackage = new NetPackage();
                 AsyncReceiveData asyncReceiveData = new AsyncReceiveData { socket = clientSocket, netPackage = netPackage };
@@ -131,9 +133,24 @@ namespace Server
             }
             catch (Exception ex)
             {
-                Console.WriteLine("异步发送数据：" + ex.ToString());
+                Console.WriteLine("异步发送数据错误：" + ex.ToString());
             }
         }
+
+        private static void SendMessage(Socket socket, NetMsg netMsg)
+        {
+
+            byte[] datas = SerializerUtil.Serializer(netMsg);
+            int dataLength = datas.Length;
+            byte[] sendDatas = new byte[dataLength + 4];
+            byte[] byteLength = BitConverter.GetBytes(dataLength);
+            byteLength.CopyTo(sendDatas, 0);
+            datas.CopyTo(sendDatas, 4);
+
+            NetworkStream networkStream = new NetworkStream(socket);
+            networkStream.BeginWrite(sendDatas, 0, sendDatas.Length, AsyncNetworkStreamSend, networkStream);
+        }
+
         public class AsyncReceiveData
         {
             public Socket socket;
