@@ -1,9 +1,9 @@
 ﻿using System.Runtime.Serialization.Formatters.Binary;
 
 
-namespace NetPackage
+namespace NetUtilPackage
 {
-    internal static class SerializerUtil
+    public static class SerializerUtil
     {
         public static byte[] Serializer(object obj)
         {

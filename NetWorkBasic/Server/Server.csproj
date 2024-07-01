@@ -8,7 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\NetPackage\NetPackage.csproj" />
+    <ProjectReference Include="..\NetPackage\NetUtilPackage.csproj" />
   </ItemGroup>
 
 </Project>

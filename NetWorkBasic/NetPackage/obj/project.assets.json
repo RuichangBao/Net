@@ -14,9 +14,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj",
-      "projectName": "NetPackage",
-      "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj",
+      "projectUniqueName": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj",
+      "projectName": "NetUtilPackage",
+      "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj",
       "packagesPath": "C:\\Users\\BK\\.nuget\\packages\\",
       "outputPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\obj\\",
       "projectStyle": "PackageReference",

@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{49FABE6E-57B9-43F3-9A1B-003F60E5C221}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NetPackage", "NetPackage\NetPackage.csproj", "{CC095DB8-5B3D-4E32-BCD2-57AD5F25A8EF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetUtilPackage", "NetPackage\NetUtilPackage.csproj", "{CC095DB8-5B3D-4E32-BCD2-57AD5F25A8EF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{90EF104D-AE80-4C43-840C-82A661F34454}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test", "Test\Test.csproj", "{90EF104D-AE80-4C43-840C-82A661F34454}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -1,15 +1,23 @@
-﻿namespace NetPackage
+﻿namespace NetUtilPackage
 {
-    [Serializable]
-    public class LoginMsg
+    public class NetPackage
     {
-        public int serverId;
-        public string account;
-        public string password;
+        public const int headLength = 4;
+        public byte[] headBuffer = null;
+        public int headIndex;
 
-        public override string ToString()
+        public int bodyLength = 0;
+        public byte[] bodyBuffer = null;
+        public int bodyIndex;
+        public NetPackage()
         {
-            return $"serverId:{serverId} account:{account} password:{password}";
+            headBuffer = new byte[headLength];
+        }
+        public void InitBodyBuff()
+        {
+            Console.WriteLine();
+            bodyLength = BitConverter.ToInt32(headBuffer, 0);
+            bodyBuffer = new byte[bodyLength];
         }
     }
 }

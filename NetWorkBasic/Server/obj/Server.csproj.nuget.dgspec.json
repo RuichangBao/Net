@@ -4,12 +4,12 @@
     "D:\\GitProject\\Net\\NetWorkBasic\\Server\\Server.csproj": {}
   },
   "projects": {
-    "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj": {
+    "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj",
-        "projectName": "NetPackage",
-        "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj",
+        "projectUniqueName": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj",
+        "projectName": "NetUtilPackage",
+        "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj",
         "packagesPath": "C:\\Users\\BK\\.nuget\\packages\\",
         "outputPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\obj\\",
         "projectStyle": "PackageReference",
@@ -91,8 +91,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj": {
-                "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj"
+              "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj": {
+                "projectPath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj"
               }
             }
           }

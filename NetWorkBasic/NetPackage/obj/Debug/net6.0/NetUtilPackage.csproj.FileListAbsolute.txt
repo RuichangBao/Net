@@ -1,0 +1,11 @@
+D:\GitProject\Net\NetWorkBasic\NetPackage\bin\Debug\net6.0\NetUtilPackage.deps.json
+D:\GitProject\Net\NetWorkBasic\NetPackage\bin\Debug\net6.0\NetUtilPackage.dll
+D:\GitProject\Net\NetWorkBasic\NetPackage\bin\Debug\net6.0\NetUtilPackage.pdb
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\NetUtilPackage.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\NetUtilPackage.AssemblyInfoInputs.cache
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\NetUtilPackage.AssemblyInfo.cs
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\NetUtilPackage.csproj.CoreCompileInputs.cache
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\NetUtilPackage.dll
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\refint\NetUtilPackage.dll
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\NetUtilPackage.pdb
+D:\GitProject\Net\NetWorkBasic\NetPackage\obj\Debug\net6.0\ref\NetUtilPackage.dll

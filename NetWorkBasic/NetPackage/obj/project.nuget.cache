@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "+cL54yABpaIK0ZteZixTy8O+nKwVzog5bho0XD5abpEng6t3kdvEfXs0kQNmVJQ0SFJaT8l9alHk153ssgf2YA==",
+  "dgSpecHash": "5Bs0QpLR4b0WtchmI3u7mzxQb8KQEcifhNxtQHU6/8cA9G1g6XHAmDQAd2wco8O8hAukjEm/NjS9k6fsydajog==",
   "success": true,
-  "projectFilePath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetPackage.csproj",
+  "projectFilePath": "D:\\GitProject\\Net\\NetWorkBasic\\NetPackage\\NetUtilPackage.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
