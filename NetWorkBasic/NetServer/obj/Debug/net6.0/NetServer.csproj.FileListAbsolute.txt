@@ -16,3 +16,5 @@ D:\GitProject\Net\NetWorkBasic\NetServer\obj\Debug\net6.0\refint\NetServer.dll
 D:\GitProject\Net\NetWorkBasic\NetServer\obj\Debug\net6.0\NetServer.pdb
 D:\GitProject\Net\NetWorkBasic\NetServer\obj\Debug\net6.0\NetServer.genruntimeconfig.cache
 D:\GitProject\Net\NetWorkBasic\NetServer\obj\Debug\net6.0\ref\NetServer.dll
+D:\GitProject\Net\NetWorkBasic\NetServer\bin\Debug\net6.0\Protocol.dll
+D:\GitProject\Net\NetWorkBasic\NetServer\bin\Debug\net6.0\Protocol.pdb

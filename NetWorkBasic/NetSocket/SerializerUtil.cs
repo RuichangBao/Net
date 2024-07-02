@@ -13,7 +13,7 @@ namespace NetTools
             datas.CopyTo(resultDatas, 4);
             return resultDatas;
         }
-        public static byte[] Serializer(NetMsg netMsg)
+        public static byte[] Serializer<T>(T netMsg) where T : NetMsg
         {
             using (MemoryStream memoryStream = new MemoryStream())
             {
@@ -32,20 +32,20 @@ namespace NetTools
 
             }
         }
-        public static NetMsg DeSerializer(byte[] data)
+        public static T DeSerializer<T>(byte[] data) where T : NetMsg
         {
             using (MemoryStream memoryStream = new MemoryStream(data))
             {
                 try
                 {
                     BinaryFormatter formatter = new BinaryFormatter();
-                    NetMsg netMsg = formatter.Deserialize(memoryStream) as NetMsg;
+                    T netMsg = formatter.Deserialize(memoryStream) as T;
                     return netMsg;
                 }
                 catch (FormatException ex)
                 {
                     Console.WriteLine("反序列化失败" + ex.ToString());
-                    return null;
+                    return default;
                 }
 
             }

@@ -3,12 +3,12 @@ using System.Net.Sockets;
 
 namespace NetTools
 {
-    public class NetToolsSocket
+    public class NetToolsSocket<T, K> where T : NetSession<K>, new() where K : NetMsg
     {
         private Socket socket;
-        public NetSession netSession;
+        public T netSession;
         public int backlog = 100;
-        private List<NetSession> listSessions;
+        private List<T> listSessions;
         public NetToolsSocket()
         {
             socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
@@ -33,8 +33,9 @@ namespace NetTools
             {
                 socket.EndConnect(ar);
                 Console.WriteLine("连接服务器线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
-                netSession = new NetSession();
+                netSession = new T();
                 netSession.StartRecData(socket);
+
             }
             catch (Exception ex)
             {
@@ -47,7 +48,7 @@ namespace NetTools
         public void StartAsServer(string ip, int port)
         {
             EndPoint endPoint = new IPEndPoint(IPAddress.Parse(ip), port);
-            listSessions = new List<NetSession>();
+            listSessions = new List<T>();
             try
             {
                 socket.Bind(endPoint);
@@ -67,8 +68,8 @@ namespace NetTools
             {
                 Console.WriteLine("客户端链接线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
                 Socket clientSocket = socket.EndAccept(ar);
-                NetSession netSession = new NetSession();
-                netSession.StartRecData(clientSocket);
+                T netSession = new T();
+                netSession.StartRecData(clientSocket, RemoverNetSession);
                 listSessions.Add(netSession);
                 socket.BeginAccept(ClientConnectCB, socket);
             }
@@ -77,19 +78,37 @@ namespace NetTools
                 Console.WriteLine("客户端建立链接错误：" + ex);
             }
         }
-        #endregion
 
-        public List<NetSession> GetSessionList()
+
+
+        #endregion
+        private void RemoverNetSession(NetSession<K> session)
+        {
+            if (listSessions == null)
+                return;
+            if (listSessions.Contains(session))
+                listSessions.Remove(session as T);
+        }
+
+        public List<T> GetSessionList()
         {
             return listSessions;
         }
 
-        public void Close()
+        public void CloseClient()
         {
-            if (socket == null)
-                return;
-            socket.Shutdown(SocketShutdown.Both);
-            socket.Close();
+            if (netSession != null)
+                netSession.CloseSession();
+        }
+        public void CloseServer()
+        {
+            for (int i = 0, length = listSessions.Count; i < length; i++)
+            {
+                listSessions[i].CloseSession();
+            }
+            listSessions = null;
+            if (socket != null)
+                socket.Close();
         }
     }
 }

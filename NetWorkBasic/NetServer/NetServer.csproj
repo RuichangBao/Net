@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\NetSocket\NetTools.csproj" />
+    <ProjectReference Include="..\Protocol\Protocol.csproj" />
   </ItemGroup>
 
 </Project>

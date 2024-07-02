@@ -21,3 +21,5 @@ D:\GitProject\Net\NetWorkBasic\NetClient\obj\Debug\net6.0\refint\NetClient.dll
 D:\GitProject\Net\NetWorkBasic\NetClient\obj\Debug\net6.0\NetClient.pdb
 D:\GitProject\Net\NetWorkBasic\NetClient\obj\Debug\net6.0\NetClient.genruntimeconfig.cache
 D:\GitProject\Net\NetWorkBasic\NetClient\obj\Debug\net6.0\ref\NetClient.dll
+D:\GitProject\Net\NetWorkBasic\NetClient\bin\Debug\net6.0\Protocol.dll
+D:\GitProject\Net\NetWorkBasic\NetClient\bin\Debug\net6.0\Protocol.pdb

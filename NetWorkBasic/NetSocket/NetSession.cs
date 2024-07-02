@@ -2,13 +2,15 @@
 
 namespace NetTools
 {
-    public class NetSession
+    public abstract class NetSession<T> where T : NetMsg
     {
         private Socket socket;
-
-        public void StartRecData(Socket socket)
+        private Action<NetSession<T>> actionClose;
+        public void StartRecData(Socket socket, Action<NetSession<T>> actionClose = null)
         {
             this.socket = socket;
+            this.actionClose = actionClose;
+            OnConnected();
             NetPackage netPackage = new NetPackage();
             try
             {
@@ -17,6 +19,7 @@ namespace NetTools
             catch (Exception ex)
             {
                 Console.WriteLine("建立链接错误，" + ex.ToString());
+                CloseSession();
             }
         }
 
@@ -29,9 +32,8 @@ namespace NetTools
                 int length = socket.EndReceive(ar);//本次接收的字节数
                 if (length <= 0)
                 {
-                    Console.WriteLine("客户端已经下线");
-                    socket.Shutdown(SocketShutdown.Both);
-                    socket.Close();
+                    Console.WriteLine("已经下线");
+                    CloseSession();
                     return;
                 }
                 netPackage.headIndex += length;
@@ -49,6 +51,7 @@ namespace NetTools
             catch (Exception ex)
             {
                 Console.WriteLine("客户端非正常下线：" + ex.ToString());
+                CloseSession();
             }
         }
         private void AsyncReceiveBody(IAsyncResult ar)
@@ -59,9 +62,8 @@ namespace NetTools
                 int length = socket.EndReceive(ar);//本次接收的字节数
                 if (length <= 0)
                 {
-                    Console.WriteLine("客户端已经下线");
-                    socket.Shutdown(SocketShutdown.Both);
-                    socket.Close();
+                    Console.WriteLine("已经下线");
+                    CloseSession();
                     return;
                 }
                 netPackage.bodyIndex += length;
@@ -71,9 +73,9 @@ namespace NetTools
                 }
                 else
                 {
-                    NetMsg netMsg = SerializerUtil.DeSerializer(netPackage.bodyBuffer);
-                    Console.WriteLine("客户端数据接收完成" + netMsg.ToString());
-                    HanldNetMsg(netMsg);
+                    NetMsg netMsg = SerializerUtil.DeSerializer<NetMsg>(netPackage.bodyBuffer);
+                    Console.WriteLine("数据接收完成" + netMsg.ToString());
+                    OnReciveMsg(netMsg);
                     netPackage.Reset();
                     socket.BeginReceive(netPackage.headBuffer, 0, NetPackage.headLength, SocketFlags.None, AsyncReceiveHead, netPackage);
                 }
@@ -82,12 +84,10 @@ namespace NetTools
             catch (Exception ex)
             {
                 Console.WriteLine("客户端非正常下线：" + ex.ToString());
+                CloseSession();
             }
         }
-        private void HanldNetMsg(NetMsg netMsg)
-        {
-            Console.WriteLine(netMsg);
-        }
+
         ///<summary>发送数据</summary>
         public void SendMessage(NetMsg netMsg)
         {
@@ -105,6 +105,7 @@ namespace NetTools
             catch (Exception ex)
             {
                 Console.WriteLine("异步发送数据错误：" + ex.ToString());
+                CloseSession();
             }
         }
         private void AsyncNetworkStreamSend(IAsyncResult ar)
@@ -119,7 +120,32 @@ namespace NetTools
             catch (Exception ex)
             {
                 Console.WriteLine("异步发送数据：" + ex.ToString());
+                CloseSession();
             }
+        }
+
+        public void CloseSession()
+        {
+            OnDisConnected();
+            actionClose?.Invoke(this);
+            if (socket != null)
+            {
+                socket.Shutdown(SocketShutdown.Both);
+                socket.Close();
+                socket = null;
+            }
+        }
+        protected virtual void OnConnected()
+        {
+            Console.WriteLine("建立链接");
+        }
+        protected virtual void OnReciveMsg(NetMsg netMsg)
+        {
+            Console.WriteLine(netMsg);
+        }
+        protected virtual void OnDisConnected()
+        {
+            Console.WriteLine("断开链接");
         }
     }
 }

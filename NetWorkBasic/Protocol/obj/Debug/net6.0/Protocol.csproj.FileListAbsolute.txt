@@ -1,0 +1,15 @@
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\Protocol.deps.json
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\Protocol.dll
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\Protocol.pdb
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\NetTools.dll
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\NetTools.pdb
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.csproj.AssemblyReference.cache
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.AssemblyInfoInputs.cache
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.AssemblyInfo.cs
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.csproj.CoreCompileInputs.cache
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.csproj.CopyComplete
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.dll
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\refint\Protocol.dll
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.pdb
+D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\ref\Protocol.dll
