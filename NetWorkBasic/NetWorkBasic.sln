@@ -3,17 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Server", "Server\Server.csproj", "{B493D533-D304-45B5-BAC3-D41259C31122}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Client", "Client\Client.csproj", "{49FABE6E-57B9-43F3-9A1B-003F60E5C221}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetTools", "NetSocket\NetTools.csproj", "{FE401778-164E-4F32-A830-00EF7D3EB7F2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetServer", "NetServer\NetServer.csproj", "{F809410B-E1A6-4101-A08D-5DEB762F5AFF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NetClient", "NetClient\NetClient.csproj", "{AA5D335A-5619-4835-83D1-A868C706B2C1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Protocol", "Protocol\Protocol.csproj", "{B1706267-F3ED-4B3D-9F52-41B1B52638CD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Protocol", "Protocol\Protocol.csproj", "{B1706267-F3ED-4B3D-9F52-41B1B52638CD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,14 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B493D533-D304-45B5-BAC3-D41259C31122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B493D533-D304-45B5-BAC3-D41259C31122}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B493D533-D304-45B5-BAC3-D41259C31122}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B493D533-D304-45B5-BAC3-D41259C31122}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49FABE6E-57B9-43F3-9A1B-003F60E5C221}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49FABE6E-57B9-43F3-9A1B-003F60E5C221}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49FABE6E-57B9-43F3-9A1B-003F60E5C221}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49FABE6E-57B9-43F3-9A1B-003F60E5C221}.Release|Any CPU.Build.0 = Release|Any CPU
 		{FE401778-164E-4F32-A830-00EF7D3EB7F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{FE401778-164E-4F32-A830-00EF7D3EB7F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FE401778-164E-4F32-A830-00EF7D3EB7F2}.Release|Any CPU.ActiveCfg = Release|Any CPU

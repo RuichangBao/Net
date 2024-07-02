@@ -74,7 +74,6 @@ namespace NetTools
                 else
                 {
                     NetMsg netMsg = SerializerUtil.DeSerializer<NetMsg>(netPackage.bodyBuffer);
-                    Console.WriteLine("数据接收完成" + netMsg.ToString());
                     OnReciveMsg(netMsg);
                     netPackage.Reset();
                     socket.BeginReceive(netPackage.headBuffer, 0, NetPackage.headLength, SocketFlags.None, AsyncReceiveHead, netPackage);
