@@ -1,8 +1,7 @@
 ﻿using Client;
-using System.Data;
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
+
 
 
 namespace Server
@@ -47,9 +46,9 @@ namespace Server
                 //ConnectSuccesMsg connectSuccesMsg = new ConnectSuccesMsg { info = "链接服务器成功AAAAAAAAA" };
                 //SendMessage(clientSocket, connectSuccesMsg);
                 //异步接收数据缓存
-                NetPackage netPackage = new NetPackage();
+                NetPackage111 netPackage = new NetPackage111();
                 AsyncReceiveData asyncReceiveData = new AsyncReceiveData { socket = clientSocket, netPackage = netPackage };
-                clientSocket.BeginReceive(netPackage.headBuffer, 0, NetPackage.headLength, SocketFlags.None, AsyncReceiveHead, asyncReceiveData);
+                clientSocket.BeginReceive(netPackage.headBuffer, 0, NetPackage111.headLength, SocketFlags.None, AsyncReceiveHead, asyncReceiveData);
                 socket.BeginAccept(ClientConnectCB, socket);
             }
             catch (Exception ex)
@@ -64,7 +63,7 @@ namespace Server
             {
                 AsyncReceiveData asyncReceiveData = ar.AsyncState as AsyncReceiveData;
                 Socket clientSocket = asyncReceiveData.socket;
-                NetPackage netPackage = asyncReceiveData.netPackage;
+                NetPackage111 netPackage = asyncReceiveData.netPackage;
                 int length = clientSocket.EndReceive(ar);//本次接收的字节数
                 if (length <= 0)
                 {
@@ -74,9 +73,9 @@ namespace Server
                     return;
                 }
                 netPackage.headIndex += length;
-                if (netPackage.headIndex < NetPackage.headLength)
+                if (netPackage.headIndex < NetPackage111.headLength)
                 {
-                    clientSocket.BeginReceive(netPackage.headBuffer, netPackage.headIndex, NetPackage.headLength - netPackage.headIndex, SocketFlags.None, AsyncReceiveHead, asyncReceiveData);
+                    clientSocket.BeginReceive(netPackage.headBuffer, netPackage.headIndex, NetPackage111.headLength - netPackage.headIndex, SocketFlags.None, AsyncReceiveHead, asyncReceiveData);
                 }
                 else
                 {
@@ -96,7 +95,7 @@ namespace Server
             {
                 AsyncReceiveData asyncReceiveData = ar.AsyncState as AsyncReceiveData;
                 Socket clientSocket = asyncReceiveData.socket;
-                NetPackage netPackage = asyncReceiveData.netPackage;
+                NetPackage111 netPackage = asyncReceiveData.netPackage;
                 int length = clientSocket.EndReceive(ar);//本次接收的字节数
                 if (length <= 0)
                 {
@@ -155,7 +154,7 @@ namespace Server
         public class AsyncReceiveData
         {
             public Socket socket;
-            public NetPackage netPackage;
+            public NetPackage111 netPackage;
         }
     }
 }

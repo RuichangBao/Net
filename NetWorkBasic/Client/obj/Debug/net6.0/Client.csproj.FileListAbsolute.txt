@@ -27,7 +27,3 @@ E:\GitProject\Net\NetWorkBasic\Client\obj\Debug\net6.0\refint\Client.dll
 E:\GitProject\Net\NetWorkBasic\Client\obj\Debug\net6.0\Client.pdb
 E:\GitProject\Net\NetWorkBasic\Client\obj\Debug\net6.0\Client.genruntimeconfig.cache
 E:\GitProject\Net\NetWorkBasic\Client\obj\Debug\net6.0\ref\Client.dll
-D:\GitProject\Net\NetWorkBasic\Client\obj\Debug\net6.0\Client.csproj.AssemblyReference.cache
-D:\GitProject\Net\NetWorkBasic\Client\obj\Debug\net6.0\Client.csproj.CopyComplete
-D:\GitProject\Net\NetWorkBasic\Client\bin\Debug\net6.0\NetUtilPackage.dll
-D:\GitProject\Net\NetWorkBasic\Client\bin\Debug\net6.0\NetUtilPackage.pdb

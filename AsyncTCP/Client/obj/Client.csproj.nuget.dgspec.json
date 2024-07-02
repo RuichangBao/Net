@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "E:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj": {}
+    "D:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj": {}
   },
   "projects": {
-    "E:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj": {
+    "D:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj",
+        "projectUniqueName": "D:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj",
         "projectName": "Client",
-        "projectPath": "E:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj",
-        "packagesPath": "C:\\Users\\12948\\.nuget\\packages\\",
-        "outputPath": "E:\\GitProject\\Net\\AsyncTCP\\Client\\obj\\",
+        "projectPath": "D:\\GitProject\\Net\\AsyncTCP\\Client\\Client.csproj",
+        "packagesPath": "C:\\Users\\BK\\.nuget\\packages\\",
+        "outputPath": "D:\\GitProject\\Net\\AsyncTCP\\Client\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\12948\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\BK\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -55,7 +59,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
         }
       }
     }

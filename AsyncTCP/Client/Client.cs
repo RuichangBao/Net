@@ -46,7 +46,6 @@ namespace Client
                 string str = Encoding.UTF8.GetString(sendData);
                 Console.WriteLine("AAAAAAAAA" + str);
                 socket.BeginSend(sendData, 0, sendData.Length, SocketFlags.None, AsyncSend, socket);
-
             }
             catch (Exception ex)
             {
@@ -68,7 +67,7 @@ namespace Client
                 return;
             }
             byte[] data = Encoding.UTF8.GetBytes(consoleRead);
-            Console.WriteLine("客户端向服务器发送数据");
+            Console.WriteLine("客户端向服务器发送数据" + consoleRead);
             socket.BeginSend(data, 0, data.Length, SocketFlags.None, AsyncSend, socket);
         }
         ///<summary>异步接受数据</summary>

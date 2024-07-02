@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Client
 {
-    public class NetPackage
+    public class NetPackage111
     {
         public const int headLength = 4;
         public byte[] headBuffer = null;
@@ -15,7 +15,7 @@ namespace Client
         public int bodyLength = 0;
         public byte[] bodyBuffer = null;
         public int bodyIndex;
-        public NetPackage()
+        public NetPackage111()
         {
             headBuffer = new byte[headLength];
         }

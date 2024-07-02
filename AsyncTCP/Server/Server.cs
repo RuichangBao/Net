@@ -37,7 +37,6 @@ namespace Server
         {
             try
             {
-                //Console.WriteLine("客户端链接线程id:" + Thread.CurrentThread.ManagedThreadId.ToString());
                 Socket socket = ar.AsyncState as Socket;
                 Socket clientSocket = socket.EndAccept(ar);
 

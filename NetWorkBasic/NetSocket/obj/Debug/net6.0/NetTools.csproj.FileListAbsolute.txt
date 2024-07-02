@@ -1,0 +1,11 @@
+D:\GitProject\Net\NetWorkBasic\NetSocket\bin\Debug\net6.0\NetTools.deps.json
+D:\GitProject\Net\NetWorkBasic\NetSocket\bin\Debug\net6.0\NetTools.dll
+D:\GitProject\Net\NetWorkBasic\NetSocket\bin\Debug\net6.0\NetTools.pdb
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\NetTools.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\NetTools.AssemblyInfoInputs.cache
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\NetTools.AssemblyInfo.cs
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\NetTools.csproj.CoreCompileInputs.cache
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\NetTools.dll
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\refint\NetTools.dll
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\NetTools.pdb
+D:\GitProject\Net\NetWorkBasic\NetSocket\obj\Debug\net6.0\ref\NetTools.dll

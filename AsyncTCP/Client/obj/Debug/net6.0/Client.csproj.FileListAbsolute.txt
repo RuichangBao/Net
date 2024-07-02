@@ -13,3 +13,17 @@ E:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\refint\Client.dll
 E:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.pdb
 E:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.genruntimeconfig.cache
 E:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\ref\Client.dll
+D:\GitProject\Net\AsyncTCP\Client\bin\Debug\net6.0\Client.exe
+D:\GitProject\Net\AsyncTCP\Client\bin\Debug\net6.0\Client.deps.json
+D:\GitProject\Net\AsyncTCP\Client\bin\Debug\net6.0\Client.runtimeconfig.json
+D:\GitProject\Net\AsyncTCP\Client\bin\Debug\net6.0\Client.dll
+D:\GitProject\Net\AsyncTCP\Client\bin\Debug\net6.0\Client.pdb
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.GeneratedMSBuildEditorConfig.editorconfig
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.AssemblyInfoInputs.cache
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.AssemblyInfo.cs
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.csproj.CoreCompileInputs.cache
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.dll
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\refint\Client.dll
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.pdb
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\Client.genruntimeconfig.cache
+D:\GitProject\Net\AsyncTCP\Client\obj\Debug\net6.0\ref\Client.dll
