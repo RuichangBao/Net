@@ -61,8 +61,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Main.cs" />
-    <Compile Include="Assets\Scripts\Proto\Test2.cs" />
     <Compile Include="Assets\Scripts\Proto\Test1.cs" />
+    <Compile Include="Assets\Scripts\Proto\Test2.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\libs\Protobuf\System.Buffers.dll" />
