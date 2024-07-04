@@ -13,3 +13,6 @@ D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.dll
 D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\refint\Protocol.dll
 D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\Protocol.pdb
 D:\GitProject\Net\NetWorkBasic\Protocol\obj\Debug\net6.0\ref\Protocol.dll
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\Google.Protobuf.dll
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\Google.Protobuf.pdb
+D:\GitProject\Net\NetWorkBasic\Protocol\bin\Debug\net6.0\Google.Protobuf.xml

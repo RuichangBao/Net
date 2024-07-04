@@ -1,0 +1,14 @@
+syntax = "proto3"; // 指定使用proto3语法
+ 
+// 定义一个消息，名为SearchRequest
+message Test1Request {
+  string query = 1; // 查询字符串
+  int32 page_number = 2; // 页码
+  int32 result_per_page = 3; // 每页结果数
+}
+// 定义一个消息，名为SearchRequest
+message Test1Ack {
+    string query = 1; // 查询字符串
+    int32 page_number = 2; // 页码
+    int32 result_per_page = 3; // 每页结果数
+  }

@@ -18,3 +18,6 @@ D:\GitProject\Net\NetWorkBasic\NetServer\obj\Debug\net6.0\NetServer.genruntimeco
 D:\GitProject\Net\NetWorkBasic\NetServer\obj\Debug\net6.0\ref\NetServer.dll
 D:\GitProject\Net\NetWorkBasic\NetServer\bin\Debug\net6.0\Protocol.dll
 D:\GitProject\Net\NetWorkBasic\NetServer\bin\Debug\net6.0\Protocol.pdb
+D:\GitProject\Net\NetWorkBasic\NetServer\bin\Debug\net6.0\Google.Protobuf.dll
+D:\GitProject\Net\NetWorkBasic\NetServer\bin\Debug\net6.0\Google.Protobuf.pdb
+D:\GitProject\Net\NetWorkBasic\NetServer\bin\Debug\net6.0\Google.Protobuf.xml

@@ -1,1 +1,0 @@
-start "C:\Users\BK\Desktop\AsyncTCP\Client\bin\Debug\net6.0\Client.exe"
